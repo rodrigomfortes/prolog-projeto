@@ -6,32 +6,32 @@ from pyswip import Prolog
 prolog = Prolog()
 
 # Carregar o código Prolog no Python
-prolog.consult("filmes.pl")  # Carrega o arquivo Prolog
+prolog.consult("filmes.pl")  
 
-# Função para obter recomendações (Top 5 filmes)
+# Função para obter recomendações (Top 3 filmes)
 def recomendar_filmes():
     gostos = gostos_entry.get().split(',')
-    gostos = [gosto.strip().lower().replace(" ", "_") for gosto in gostos]  # Corrigir gêneros para o formato usado no Prolog
+    gostos = [gosto.strip().lower().replace(" ", "_") for gosto in gostos] 
 
     filmes_recomendados.delete(1.0, tk.END)  # Limpar a lista de filmes recomendados
 
-    # Consultar Prolog para os filmes recomendados
-    query = "recomendar([{}], Filme, Nota)".format(",".join(gostos))  # Corrigir para passar a lista no formato Prolog
-    print("Consulta Prolog:", query)  # Para depuração
+    # Consultar Prolog para os filmes recomendados (Top 3)
+    query = "top_3_filmes([{}], Top3)".format(",".join(gostos))  
     result = list(prolog.query(query))
-    
-    count = 0
-    if result:
+
+    if not result:  # Se o resultado estiver vazio
+        filmes_recomendados.insert(tk.END, "Nenhum filme encontrado.\n")
+    else:
+        count = 0
+        filmes_recomendados.insert(tk.END, "Top 3 filmes para você:\n\n")
+        # O resultado agora será uma lista com 3 filmes e notas
         for item in result:
-            if count < 5:  # Limitar a 5 filmes
-                filme = item["Filme"]
-                nota = item["Nota"]
+            filme_lista = item["Top3"]  
+            for filme_info in filme_lista:
+                filme = filme_info[0]  
+                nota = filme_info[1]  
                 filmes_recomendados.insert(tk.END, f"{filme.replace('_', ' ').title()} - Nota: {nota}\n")
                 count += 1
-            else:
-                break
-    else:
-        filmes_recomendados.insert(tk.END, "Nenhum filme recomendado.\n")
 
 # Função para marcar filme como assistido
 def marcar_assistido():

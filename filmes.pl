@@ -13,8 +13,8 @@ filme(duna, ficcao).
 nota(duna, 8.6).
 filme(avatar, ficcao).
 nota(avatar, 7.8).
-filme(2001_uma_odisseia_no_espaco, ficcao).
-nota(2001_uma_odisseia_no_espaco, 8.3).
+filme(planeta_dos_macacos, ficcao).
+nota(planeta_dos_macacos, 8.0).
 filme(a_chegada, ficcao).
 nota(a_chegada, 7.9).
 filme(o_senhor_dos_aneis, ficcao).
@@ -25,8 +25,8 @@ filme(her, ficcao).
 nota(her, 8.0).
 filme(inception, ficcao).
 nota(inception, 8.8).
-filme(a_máquina_do_tempo, ficcao).
-nota(a_máquina_do_tempo, 7.5).
+filme(a_maquina_do_tempo, ficcao).
+nota(a_maquina_do_tempo, 7.5).
 
 % Ação
 filme(matrix, acao).
@@ -79,8 +79,8 @@ filme(a_vida_e_bela, fantasia).
 nota(a_vida_e_bela, 8.6).
 filme(o_senhor_dos_aneis_a_companhia_do_anel, fantasia).
 nota(o_senhor_dos_aneis_a_companhia_do_anel, 8.8).
-filme(é_um_mundo_maravilhoso, fantasia).
-nota(é_um_mundo_maravilhoso, 8.6).
+filme(e_um_mundo_maravilhoso, fantasia).
+nota(e_um_mundo_maravilhoso, 8.6).
 filme(um_mundo_dentro_de_um_mundo, fantasia).
 nota(um_mundo_dentro_de_um_mundo, 7.7).
 filme(o_senhor_dos_aneis_as_duas_torres, fantasia).
@@ -187,22 +187,23 @@ recomendar(Gostos, Filme, Nota) :-
     member(Genero, Gostos),
     \+ assistido(Filme).  % Garante que o filme não foi assistido
 
-% Top 5 filmes baseado na nota, sempre retorna os 5 primeiros
-top_5_filmes(Gostos, Top5) :-
-    findall([Filme, Nota], recomendar(Gostos, Filme, Nota), Filmes),
+% Top 3 filmes baseado na nota, sempre retorna os 3 primeiros
+top_3_filmes(Gostos, Top3) :-
+    findall([Filme, Nota], recomendar(Gostos, Filme, Nota), Filmes), % Pega todos os filmes recomendados com suas notas
     sort(2, @>=, Filmes, FilmesOrdenados),  % Ordena os filmes pela nota em ordem decrescente
-    first_n(5, FilmesOrdenados, Top5).  % Pega os 5 primeiros filmes
+    first_n(3, FilmesOrdenados, Top3).  % Pega os 3 primeiros filmes (maiores notas)
 
-% Auxiliar para pegar os 5 primeiros filmes da lista ordenada
-first_n(_, [], []).
+% Auxiliar para pegar os 3 primeiros filmes da lista ordenada
 
-first_n(N, [X|T], [X|Result]) :-
-    N > 0,
-    N1 is N - 1,
-    first_n(N1, T, Result).
+first_n(N, [X|T], [X|Result]) :- 
+    N > 0,  % Se N for maior que 0
+    N1 is N - 1,  % Decremente N
+    first_n(N1, T, Result).  % Continue recursivamente pegando os primeiros N
 
-first_n(0, _, []).
+% Caso N seja 0, retorne uma lista vazia
+first_n(0, _, []).  
 
 % Marcar filme como assistido
 marcar_assistido(Filme) :-
     assert(assistido(Filme)).
+    
