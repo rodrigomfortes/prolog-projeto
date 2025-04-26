@@ -1,627 +1,607 @@
 % Fatos serie(Nome, Lista_de_Generos)
-serie('Black Mirror', ['TV-MA', 'Drama', 'Sci-Fi', 'Thriller']).
-serie('The Last of Us', ['TV-MA', 'Action', 'Adventure', 'Drama']).
-serie('The White Lotus', ['TV-MA', 'Comedy', 'Drama', 'Mystery']).
-serie('Daredevil: Born Again', ['TV-MA', 'Action', 'Crime', 'Drama']).
-serie('The Pitt', ['TV-MA', 'Drama']). 
-serie('MobLand', ['TV-MA', 'Action', 'Crime', 'Drama']).
-serie('Your Friends & Neighbors', ['TV-MA', 'Drama', 'Thriller']).
-serie('The Handmaid\'s Tale', ['TV-MA', 'Drama', 'Sci-Fi', 'Thriller']).
-serie('Severance', ['TV-MA', 'Drama', 'Mystery', 'Sci-Fi']).
-serie('The Wheel of Time', ['TV-14', 'Action', 'Adventure', 'Fantasy']).
-serie('1923', ['TV-MA', 'Drama', 'Western', 'Historical']).
-serie('Adolescence', ['TV-MA', 'Drama', 'Crime']). 
-serie('Ransom Canyon', ['TV-MA', 'Drama', 'Romance']).
-serie('The Righteous Gemstones', ['TV-MA', 'Comedy', 'Drama']).
-serie('Game of Thrones', ['TV-MA', 'Action', 'Adventure', 'Drama']).    
-serie('The Residence', ['TV-MA', 'Mystery', 'Comedy', 'Drama']). 
-serie('The Rookie', ['TV-14', 'Action', 'Crime', 'Drama']).
-serie('Yellowjackets', ['TV-MA', 'Drama', 'Horror', 'Mystery']).
-serie('Good American Family', ['TV-MA', 'Drama', 'Comedy']). 
-serie('Bosch: Legacy', ['TV-MA', 'Crime', 'Drama', 'Mystery']).
-serie('The Studio', ['TV-MA', 'Drama']).
-serie('Yellowstone', ['TV-MA', 'Drama', 'Western']).
-serie('The Bondsman', ['TV', 'Action', 'Drama', 'Fantasy']). 
-serie('9-1-1', ['TV-14', 'Action', 'Drama', 'Thriller']).
-serie('Reacher', ['TV-MA', 'Action', 'Crime', 'Drama']).
-serie('Breaking Bad', ['TV-MA', 'Crime', 'Drama', 'Thriller']).
-serie('Pulse', ['TV-MA', 'Drama', 'Thriller']).
-serie('Invincible', ['TV-MA', 'Animation', 'Action', 'Adventure', 'Superhero']).
-serie('Hacks', ['TV-MA', 'Comedy', 'Drama']).
-serie('The Gardener', ['TV-MA', 'Thriller', 'Mystery']). 
-serie('North of North', ['TV-MA', 'Drama']).
-serie('The Glass Dome', ['TV-MA', 'Sci-Fi', 'Drama', 'Thriller']). 
-serie('Grey\'s Anatomy', ['TV-14', 'Drama', 'Romance']).
-serie('Murderbot', ['TV-MA', 'Sci-Fi', 'Action', 'Adventure']). 
-serie('Andor', ['TV-14', 'Action', 'Adventure', 'Sci-Fi', 'Thriller']).
-serie('Tracker', ['TV-14', 'Drama', 'Mystery', 'Thriller']).
-serie('Stranger Things', ['TV-14', 'Drama', 'Fantasy', 'Horror', 'Mystery', 'Sci-Fi']).
-serie('Dying for Sex', ['TV-MA', 'Documentary', 'True Crime']). 
-serie('Devil May Cry', ['TV-MA', 'Animation', 'Action', 'Fantasy']).
-serie('Matlock', ['TV-14', 'Crime', 'Drama', 'Mystery', 'Legal']).
-serie('The Chosen', ['TV-PG', 'Drama', 'History', 'Biography']).
-serie('The Stolen Girl', ['TV-MA', 'Drama', 'Thriller', 'Mystery']). 
-serie('The Walking Dead', ['TV-MA', 'Drama', 'Horror', 'Thriller']).
-serie('Dexter', ['TV-MA', 'Crime', 'Drama', 'Mystery', 'Thriller']).
-serie('Daredevil', ['TV-MA', 'Action', 'Crime', 'Drama']).
-serie('Attack on Titan', ['TV-MA', 'Animation', 'Action', 'Adventure', 'Fantasy', 'Horror']).
-serie('This City Is Ours', ['TV', 'Drama', 'Crime']). 
-serie('Paradise', ['TV-MA', 'Drama', 'Mystery', 'Thriller']).
-serie('Law & Order: Special Victims Unit', ['TV-14', 'Crime', 'Drama', 'Mystery', 'Thriller']).
-serie('ER', ['TV-14', 'Drama']).
-serie('House', ['TV-14', 'Drama', 'Mystery']).
-serie('Supernatural', ['TV-14', 'Drama', 'Fantasy', 'Horror', 'Mystery']).
-serie('NCIS', ['TV-14', 'Action', 'Crime', 'Drama', 'Mystery']).
-serie('The Sopranos', ['TV-MA', 'Crime', 'Drama']).
-serie('Doctor Who', ['TV-PG', 'Adventure', 'Drama', 'Sci-Fi']).
-serie('When Life Gives You Tangerines', ['TV-14', 'Drama', 'Romance']).
-serie('High Potential', ['TV-14', 'Drama', 'Comedy', 'Crime']). 
-serie('You', ['TV-MA', 'Crime', 'Drama', 'Thriller', 'Romance']).
-serie('Towards Zero', ['TV-MA', 'Thriller', 'Crime', 'Mystery']). 
-serie('Lost', ['TV-14', 'Adventure', 'Drama', 'Fantasy', 'Mystery', 'Sci-Fi', 'Thriller']).
-serie('Solo Leveling', ['TV-MA', 'Animation', 'Action', 'Adventure', 'Fantasy']).
-serie('The Boys', ['TV-MA', 'Action', 'Comedy', 'Crime', 'Sci-Fi', 'Superhero']).
-serie('Better Call Saul', ['TV-MA', 'Crime', 'Drama']).
-serie('1883', ['TV-MA', 'Drama', 'Western']).
-serie('True Detective', ['TV-MA', 'Crime', 'Drama', 'Mystery', 'Thriller']).
-serie('Dark Winds', ['TV-MA', 'Crime', 'Drama', 'Mystery', 'Thriller']).
-serie('Landman', ['TV-MA', 'Drama']). 
-serie('Ghosts', ['TV-PG', 'Comedy', 'Fantasy']).
-serie('One Piece', ['TV-14', 'Adventure', 'Fantasy', 'Action', 'Comedy']).
-serie('Will Trent', ['TV-14', 'Crime', 'Drama', 'Mystery']).
-serie('Happy Face', ['TV-MA', 'Documentary', 'Crime', 'Thriller']). 
-serie('Criminal Minds', ['TV-14', 'Crime', 'Drama', 'Mystery', 'Thriller']).
-serie('Ted Lasso', ['TV-MA', 'Comedy', 'Drama', 'Sport']).
-serie('Silo', ['TV-MA', 'Sci-Fi', 'Thriller', 'Drama', 'Mystery']).
-serie('Suits LA', ['TV-14', 'Drama', 'Legal']). 
-serie('Gangs of London', ['TV-MA', 'Action', 'Crime', 'Drama', 'Thriller']).
-serie('The Office', ['TV-14', 'Comedy']).
-serie('Abbott Elementary', ['TV-PG', 'Comedy']).
-serie('Dope Thief', ['TV', 'Crime', 'Drama']). 
-serie('Fargo', ['TV-MA', 'Crime', 'Drama', 'Thriller', 'Black Comedy']).
-serie('House of the Dragon', ['TV-MA', 'Action', 'Adventure', 'Drama', 'Fantasy']).
-serie('Untitled Harry Potter Series', ['TV', 'Fantasy', 'Drama', 'Adventure']). 
-serie('Law & Order', ['TV-14', 'Crime', 'Drama', 'Mystery', 'Legal']).
-serie('Doctor Odyssey', ['TV', 'Drama', 'Medical']). 
-serie('Succession', ['TV-MA', 'Drama', 'Comedy']).
-serie('The Big Bang Theory', ['TV-PG', 'Comedy', 'Sitcom']).
-serie('Fallout', ['TV-MA', 'Action', 'Adventure', 'Drama', 'Sci-Fi', 'Post-apocalyptic']).
-serie('Friends', ['TV-14', 'Comedy', 'Romance', 'Sitcom']).
-serie('Rick and Morty', ['TV-MA', 'Animation', 'Adventure', 'Comedy', 'Sci-Fi']).
-serie('From', ['TV-MA', 'Horror', 'Mystery', 'Sci-Fi']).
-serie('Slow Horses', ['TV-MA', 'Thriller', 'Spy Fiction', 'Drama', 'Comedy']).
-serie('House of David', ['TV', 'Drama', 'Historical']). 
-serie('Shameless', ['TV-MA', 'Comedy', 'Drama']).
-serie('Grace', ['TV-14', 'Crime', 'Drama', 'Mystery']).
-serie('Suits', ['TV-14', 'Drama', 'Legal']).
-serie('Death in Paradise', ['TV-PG', 'Crime', 'Drama', 'Mystery', 'Comedy']).
-serie('The Blacklist', ['TV-14', 'Crime', 'Drama', 'Mystery', 'Thriller']).
-serie('Prison Break', ['TV-14', 'Action', 'Crime', 'Drama', 'Thriller']).
-serie('Elsbeth', ['TV-14', 'Crime', 'Drama', 'Comedy']). 
+serie('Black Mirror', ['TV-MA', 'Drama', 'Sci-Fi', 'Thriller'], 8.7).
+serie('The Last of Us', ['TV-MA', 'Action', 'Adventure', 'Drama'], 8.8).
+serie('The White Lotus', ['TV-MA', 'Comedy', 'Drama', 'Mystery'], 7.9).
+serie('Daredevil: Born Again', ['TV-MA', 'Action', 'Crime', 'Drama'], 8.6).
+serie('The Pitt', ['TV-MA', 'Drama'], 7.1). 
+serie('MobLand', ['TV-MA', 'Action', 'Crime', 'Drama'], 6.8).
+serie('Your Friends & Neighbors', ['TV-MA', 'Drama', 'Thriller'], 7.2).
+serie('The Handmaid\'s Tale', ['TV-MA', 'Drama', 'Sci-Fi', 'Thriller'], 8.4).
+serie('Severance', ['TV-MA', 'Drama', 'Mystery', 'Sci-Fi'], 8.7).
+serie('The Wheel of Time', ['TV-14', 'Action', 'Adventure', 'Fantasy'], 7.2).
+serie('1923', ['TV-MA', 'Drama', 'Western', 'Historical'], 7.8).
+serie('Adolescence', ['TV-MA', 'Drama', 'Crime'], 6.5). 
+serie('Ransom Canyon', ['TV-MA', 'Drama', 'Romance'], 7.3).
+serie('The Righteous Gemstones', ['TV-MA', 'Comedy', 'Drama'], 8.0).
+serie('Game of Thrones', ['TV-MA', 'Action', 'Adventure', 'Drama'], 9.2).    
+serie('The Residence', ['TV-MA', 'Mystery', 'Comedy', 'Drama'], 7.1). 
+serie('The Rookie', ['TV-14', 'Action', 'Crime', 'Drama'], 8.0).
+serie('Yellowjackets', ['TV-MA', 'Drama', 'Horror', 'Mystery'], 7.9).
+serie('Good American Family', ['TV-MA', 'Drama', 'Comedy'], 6.7). 
+serie('Bosch: Legacy', ['TV-MA', 'Crime', 'Drama', 'Mystery'], 8.4).
+serie('The Studio', ['TV-MA', 'Drama'], 6.9).
+serie('Yellowstone', ['TV-MA', 'Drama', 'Western'], 8.7).
+serie('The Bondsman', ['TV', 'Action', 'Drama', 'Fantasy'], 6.5). 
+serie('9-1-1', ['TV-14', 'Action', 'Drama', 'Thriller'], 7.8).
+serie('Reacher', ['TV-MA', 'Action', 'Crime', 'Drama'], 8.1).
+serie('Breaking Bad', ['TV-MA', 'Crime', 'Drama', 'Thriller'], 9.5).
+serie('Pulse', ['TV-MA', 'Drama', 'Thriller'], 6.4).
+serie('Invincible', ['TV-MA', 'Animation', 'Action', 'Adventure', 'Superhero'], 8.7).
+serie('Hacks', ['TV-MA', 'Comedy', 'Drama'], 8.2).
+serie('The Gardener', ['TV-MA', 'Thriller', 'Mystery'], 7.0). 
+serie('North of North', ['TV-MA', 'Drama'], 6.8).
+serie('The Glass Dome', ['TV-MA', 'Sci-Fi', 'Drama', 'Thriller'], 7.3). 
+serie('Grey\'s Anatomy', ['TV-14', 'Drama', 'Romance'], 7.6).
+serie('Murderbot', ['TV-MA', 'Sci-Fi', 'Action', 'Adventure'], 7.9). 
+serie('Andor', ['TV-14', 'Action', 'Adventure', 'Sci-Fi', 'Thriller'], 8.4).
+serie('Tracker', ['TV-14', 'Drama', 'Mystery', 'Thriller'], 7.8).
+serie('Stranger Things', ['TV-14', 'Drama', 'Fantasy', 'Horror', 'Mystery', 'Sci-Fi'], 8.7).
+serie('Dying for Sex', ['TV-MA', 'Documentary', 'True Crime'], 7.5). 
+serie('Devil May Cry', ['TV-MA', 'Animation', 'Action', 'Fantasy'], 7.4).
+serie('Matlock', ['TV-14', 'Crime', 'Drama', 'Mystery', 'Legal'], 7.3).
+serie('The Chosen', ['TV-PG', 'Drama', 'History', 'Biography'], 9.4).
+serie('The Stolen Girl', ['TV-MA', 'Drama', 'Thriller', 'Mystery'], 7.1). 
+serie('The Walking Dead', ['TV-MA', 'Drama', 'Horror', 'Thriller'], 8.2).
+serie('Dexter', ['TV-MA', 'Crime', 'Drama', 'Mystery', 'Thriller'], 8.6).
+serie('Daredevil', ['TV-MA', 'Action', 'Crime', 'Drama'], 8.6).
+serie('Attack on Titan', ['TV-MA', 'Animation', 'Action', 'Adventure', 'Fantasy', 'Horror'], 9.0).
+serie('This City Is Ours', ['TV', 'Drama', 'Crime'], 6.9). 
+serie('Paradise', ['TV-MA', 'Drama', 'Mystery', 'Thriller'], 7.4).
+serie('Law & Order: Special Victims Unit', ['TV-14', 'Crime', 'Drama', 'Mystery', 'Thriller'], 8.1).
+serie('ER', ['TV-14', 'Drama'], 7.7).
+serie('House', ['TV-14', 'Drama', 'Mystery'], 8.7).
+serie('Supernatural', ['TV-14', 'Drama', 'Fantasy', 'Horror', 'Mystery'], 8.4).
+serie('NCIS', ['TV-14', 'Action', 'Crime', 'Drama', 'Mystery'], 7.7).
+serie('The Sopranos', ['TV-MA', 'Crime', 'Drama'], 9.2).
+serie('Doctor Who', ['TV-PG', 'Adventure', 'Drama', 'Sci-Fi'], 8.6).
+serie('When Life Gives You Tangerines', ['TV-14', 'Drama', 'Romance'], 7.2).
+serie('High Potential', ['TV-14', 'Drama', 'Comedy', 'Crime'], 7.5). 
+serie('You', ['TV-MA', 'Crime', 'Drama', 'Thriller', 'Romance'], 7.7).
+serie('Towards Zero', ['TV-MA', 'Thriller', 'Crime', 'Mystery'], 7.3). 
+serie('Lost', ['TV-14', 'Adventure', 'Drama', 'Fantasy', 'Mystery', 'Sci-Fi', 'Thriller'], 8.3).
+serie('Solo Leveling', ['TV-MA', 'Animation', 'Action', 'Adventure', 'Fantasy'], 8.5).
+serie('The Boys', ['TV-MA', 'Action', 'Comedy', 'Crime', 'Sci-Fi', 'Superhero'], 8.7).
+serie('Better Call Saul', ['TV-MA', 'Crime', 'Drama'], 9.0).
+serie('1883', ['TV-MA', 'Drama', 'Western'], 8.7).
+serie('True Detective', ['TV-MA', 'Crime', 'Drama', 'Mystery', 'Thriller'], 8.9).
+serie('Dark Winds', ['TV-MA', 'Crime', 'Drama', 'Mystery', 'Thriller'], 7.6).
+serie('Landman', ['TV-MA', 'Drama'], 7.2). 
+serie('Ghosts', ['TV-PG', 'Comedy', 'Fantasy'], 8.4).
+serie('One Piece', ['TV-14', 'Adventure', 'Fantasy', 'Action', 'Comedy'], 8.7).
+serie('Will Trent', ['TV-14', 'Crime', 'Drama', 'Mystery'], 7.9).
+serie('Happy Face', ['TV-MA', 'Documentary', 'Crime', 'Thriller'], 7.8). 
+serie('Criminal Minds', ['TV-14', 'Crime', 'Drama', 'Mystery', 'Thriller'], 8.1).
+serie('Ted Lasso', ['TV-MA', 'Comedy', 'Drama', 'Sport'], 8.8).
+serie('Silo', ['TV-MA', 'Sci-Fi', 'Thriller', 'Drama', 'Mystery'], 8.1).
+serie('Suits LA', ['TV-14', 'Drama', 'Legal'], 7.4). 
+serie('Gangs of London', ['TV-MA', 'Action', 'Crime', 'Drama', 'Thriller'], 8.2).
+serie('The Office', ['TV-14', 'Comedy'], 8.9).
+serie('Abbott Elementary', ['TV-PG', 'Comedy'], 8.1).
+serie('Dope Thief', ['TV', 'Crime', 'Drama'], 6.7). 
+serie('Fargo', ['TV-MA', 'Crime', 'Drama', 'Thriller', 'Black Comedy'], 8.9).
+serie('House of the Dragon', ['TV-MA', 'Action', 'Adventure', 'Drama', 'Fantasy'], 8.5).
+serie('Law & Order', ['TV-14', 'Crime', 'Drama', 'Mystery', 'Legal'], 7.8).
+serie('Doctor Odyssey', ['TV', 'Drama', 'Medical'], 7.2). 
+serie('Succession', ['TV-MA', 'Drama', 'Comedy'], 8.9).
+serie('The Big Bang Theory', ['TV-PG', 'Comedy', 'Sitcom'], 8.2).
+serie('Fallout', ['TV-MA', 'Action', 'Adventure', 'Drama', 'Sci-Fi', 'Post-apocalyptic'], 8.5).
+serie('Friends', ['TV-14', 'Comedy', 'Romance', 'Sitcom'], 8.9).
+serie('Rick and Morty', ['TV-MA', 'Animation', 'Adventure', 'Comedy', 'Sci-Fi'], 9.1).
+serie('From', ['TV-MA', 'Horror', 'Mystery', 'Sci-Fi'], 7.8).
+serie('Slow Horses', ['TV-MA', 'Thriller', 'Spy Fiction', 'Drama', 'Comedy'], 8.0).
+serie('House of David', ['TV', 'Drama', 'Historical'], 7.1). 
+serie('Shameless', ['TV-MA', 'Comedy', 'Drama'], 8.6).
+serie('Grace', ['TV-14', 'Crime', 'Drama', 'Mystery'], 7.8).
+serie('Suits', ['TV-14', 'Drama', 'Legal'], 8.4).
+serie('Death in Paradise', ['TV-PG', 'Crime', 'Drama', 'Mystery', 'Comedy'], 7.9).
+serie('The Blacklist', ['TV-14', 'Crime', 'Drama', 'Mystery', 'Thriller'], 8.0).
+serie('Prison Break', ['TV-14', 'Action', 'Crime', 'Drama', 'Thriller'], 8.3).
+serie('Elsbeth', ['TV-14', 'Crime', 'Drama', 'Comedy'], 7.6).
 
 % Fatos anime(Nome, Lista_de_Generos)
-anime('Sousou no Frieren', ['aventura', 'drama', 'fantasia']).
-anime('Fullmetal Alchemist: Brotherhood', ['acao', 'aventura', 'drama', 'fantasia']).
-anime('Steins;Gate', ['ficcao', 'drama', 'psicologico', 'suspense']).
-anime('Shingeki no Kyojin Season 3 Part 2', ['acao', 'drama', 'fantasia', 'misterio']).
-anime('One Piece Fan Letter', ['acao', 'aventura', 'comedia', 'fantasia']).
-anime('Gintama°', ['acao', 'comedia', 'ciencia_ficcao']).
-anime('Gintama: The Final', ['acao', 'comedia', 'drama', 'ciencia_ficcao']).
-anime('Hunter x Hunter (2011)', ['acao', 'aventura', 'fantasia']).
-anime('Gintama\'\'', ['acao', 'comedia', 'ciencia_ficcao']).
-anime('Gintama\'\': Enchousen', ['acao', 'comedia', 'ciencia_ficcao']).
-anime('Ginga Eiyuu Densetsu', ['acao', 'drama', 'ficcao', 'militar']).
-anime('Bleach: Sennen Kessen-hen', ['acao', 'aventura', 'fantasia', 'shounen']).
-anime('Gintama.', ['acao', 'comedia', 'ciencia_ficcao']).
-anime('Kaguya-sama wa Kokurasetai: Ultra Romantic', ['comedia', 'romance', 'escolar']).
-anime('Fruits Basket: The Final', ['drama', 'romance', 'sobrenatural']).
-anime('Clannad: After Story', ['drama', 'romance', 'sobrenatural']).
-anime('Gintama', ['acao', 'comedia', 'ciencia_ficcao']).
-anime('Koe no Katachi', ['drama', 'escolar']).
-anime('3-gatsu no Lion 2nd Season', ['drama', 'escolar', 'slice_of_life']).
-anime('Code Geass: Hangyaku no Lelouch R2', ['acao', 'drama', 'ficcao', 'militar']).
-anime('Gintama Movie 2: Kanketsu-hen - Yorozuya yo Eien Nare', ['acao', 'comedia', 'drama', 'ciencia_ficcao']).
-anime('Monster', ['drama', 'misterio', 'psicologico', 'suspense']).
-anime('Gintama. Shirogane no Tamashii-hen - Kouhan-sen', ['acao', 'comedia', 'drama', 'ciencia_ficcao']).
-anime('Shingeki no Kyojin: The Final Season - Kanketsu-hen', ['acao', 'drama', 'fantasia', 'misterio']).
-anime('Kusuriya no Hitorigoto', ['drama', 'misterio', 'historico']).
-anime('Owarimonogatari 2nd Season', ['comedia', 'misterio', 'psicologico', 'sobrenatural']).
-anime('Violet Evergarden Movie', ['drama', 'fantasia']).
-anime('Kimi no Na wa.', ['drama', 'romance', 'sobrenatural']).
-anime('Kingdom 3rd Season', ['acao', 'drama', 'historico', 'militar']).
-anime('Kusuriya no Hitorigoto 2nd Season', ['drama', 'misterio', 'historico']).
-anime('Gintama. Shirogane no Tamashii-hen', ['acao', 'comedia', 'drama', 'ciencia_ficcao']).
-anime('Shingeki no Kyojin Movie: Kanketsu-hen - The Last Attack', ['acao', 'drama', 'fantasia', 'misterio']).
-anime('Vinland Saga Season 2', ['acao', 'aventura', 'drama', 'historico']).
-anime('Hajime no Ippo', ['acao', 'comedia', 'drama', 'esporte']).
-anime('Kizumonogatari III: Reiketsu-hen', ['acao', 'misterio', 'psicologico', 'sobrenatural']).
-anime('Mob Psycho 100 II', ['acao', 'comedia', 'sobrenatural']).
-anime('Shingeki no Kyojin: The Final Season', ['acao', 'drama', 'fantasia', 'misterio']).
-anime('Sen to Chihiro no Kamikakushi', ['aventura', 'drama', 'fantasia']).
-anime('Vinland Saga', ['acao', 'aventura', 'drama', 'historico']).
-anime('Haikyuu!! Karasuno Koukou vs. Shiratorizawa Gakuen Koukou', ['comedia', 'drama', 'esporte']).
-anime('One Piece', ['action', 'adventure', 'fantasy']).
-anime('Shiguang Dailiren', ['drama', 'fantasy', 'mystery']).
-anime('The First Slam Dunk', ['drama', 'sports']).
-anime('Kimetsu no Yaiba: Yuukaku-hen', ['action', 'fantasy', 'supernatural']).
-anime('Kingdom 5th Season', ['action', 'drama', 'historical']).
-anime('Mushishi Zoku Shou 2nd Season', ['adventure', 'fantasy', 'supernatural']).
-anime('Hibike! Euphonium 3', ['music', 'slice_of_life']).
-anime('86 Part 2', ['action', 'drama', 'military', 'sci_fi']).
-anime('Chi. Chikyuu no Undou ni Tsuite', ['drama', 'fantasy', 'sci_fi']).
-anime('Mob Psycho 100 III', ['action', 'comedy', 'supernatural']).
-anime('Rurouni Kenshin: Meiji Kenkaku Romantan - Tsuioku-hen', ['action', 'adventure', 'historical']).
-anime('Shouwa Genroku Rakugo Shinjuu: Sukeroku Futatabi-hen', ['drama', 'historical']).
-anime('Bleach: Sennen Kessen-hen - Ketsubetsu-tan', ['action', 'supernatural']).
-anime('Code Geass: Hangyaku no Lelouch', ['action', 'drama', 'mecha']).
-anime('Mushishi Zoku Shou', ['adventure', 'fantasy', 'supernatural']).
-anime('Mo Dao Zu Shi: Wanjie Pian', ['action', 'fantasy', 'drama']).
-anime('Great Teacher Onizuka', ['comedy', 'drama', 'slice_of_life']).
-anime('Violet Evergarden', ['drama', 'fantasy']).
-anime('Hajime no Ippo: New Challenger', ['action', 'sports']).
-anime('Howl no Ugoku Shiro', ['fantasy', 'adventure']).
-anime('Mononoke Hime', ['adventure', 'fantasy']).
-anime('Shiguang Dailiren II', ['drama', 'fantasy', 'mystery']).
-anime('Fate/stay night Movie: Heaven\'s Feel - III. Spring Song', ['action', 'fantasy']).
-anime('Look Back', ['drama', 'slice_of_life']).
-anime('Mushishi', ['adventure', 'fantasy', 'supernatural']).
-anime('Odd Taxi', ['drama', 'mystery', 'slice_of_life']).
-anime('Shigatsu wa Kimi no Uso', ['drama', 'music', 'romance']).
-anime('Tengen Toppa Gurren Lagann', ['action', 'adventure', 'mecha']).
-anime('Shingeki no Kyojin Season 3', ['action', 'drama', 'fantasy']).
-anime('Made in Abyss', ['adventure', 'fantasy', 'drama']).
-anime('Natsume Yuujinchou Shi', ['drama', 'supernatural']).
-anime('Kaguya-sama wa Kokurasetai? Tensai-tachi no Renai Zunousen', ['comedy', 'romance']).
-anime('Ping Pong the Animation', ['drama', 'sports']).
-anime('Bungou Stray Dogs 5th Season', ['action', 'mystery', 'supernatural']).
-anime('Death Note', ['mystery', 'psychological', 'supernatural']).
-anime('Haikyuu!! Second Season', ['action', 'sports']).
-anime('Cyberpunk: Edgerunners', ['action', 'sci_fi']).
-anime('Made in Abyss Movie 3: Fukaki Tamashii no Reimei', ['adventure', 'fantasy']).
-anime('Kenpuu Denki Berserk', ['action', 'adventure', 'fantasy']).
-anime('Dungeon Meshi', ['adventure', 'fantasy', 'cooking']).
-anime('Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai', ['drama', 'romance', 'supernatural']).
-anime('Suzumiya Haruhi no Shoushitsu', ['mystery', 'psychological', 'supernatural']).
+anime('Sousou no Frieren', ['aventura', 'drama', 'fantasia'], 9.1).
+anime('Fullmetal Alchemist: Brotherhood', ['acao', 'aventura', 'drama', 'fantasia'], 9.1).
+anime('Steins;Gate', ['ficcao', 'drama', 'psicologico', 'suspense'], 9.1).
+anime('Shingeki no Kyojin Season 3 Part 2', ['acao', 'drama', 'fantasia', 'misterio'], 9.0).
+anime('One Piece Fan Letter', ['acao', 'aventura', 'comedia', 'fantasia'], 8.5).
+anime('Gintama°', ['acao', 'comedia', 'ciencia_ficcao'], 9.0).
+anime('Gintama: The Final', ['acao', 'comedia', 'drama', 'ciencia_ficcao'], 9.1).
+anime('Hunter x Hunter (2011)', ['acao', 'aventura', 'fantasia'], 9.0).
+anime('Gintama\'\'', ['acao', 'comedia', 'ciencia_ficcao'], 9.0).
+anime('Gintama\'\': Enchousen', ['acao', 'comedia', 'ciencia_ficcao'], 8.9).
+anime('Ginga Eiyuu Densetsu', ['acao', 'drama', 'ficcao', 'militar'], 9.1).
+anime('Bleach: Sennen Kessen-hen', ['acao', 'aventura', 'fantasia', 'shounen'], 8.9).
+anime('Gintama.', ['acao', 'comedia', 'ciencia_ficcao'], 9.0).
+anime('Kaguya-sama wa Kokurasetai: Ultra Romantic', ['comedia', 'romance', 'escolar'], 8.9).
+anime('Fruits Basket: The Final', ['drama', 'romance', 'sobrenatural'], 8.7).
+anime('Clannad: After Story', ['drama', 'romance', 'sobrenatural'], 9.0).
+anime('Gintama', ['acao', 'comedia', 'ciencia_ficcao'], 8.9).
+anime('Koe no Katachi', ['drama', 'escolar'], 8.9).
+anime('3-gatsu no Lion 2nd Season', ['drama', 'escolar', 'slice_of_life'], 8.9).
+anime('Code Geass: Hangyaku no Lelouch R2', ['acao', 'drama', 'ficcao', 'militar'], 9.0).
+anime('Gintama Movie 2: Kanketsu-hen - Yorozuya yo Eien Nare', ['acao', 'comedia', 'drama', 'ciencia_ficcao'], 9.0).
+anime('Monster', ['drama', 'misterio', 'psicologico', 'suspense'], 8.8).
+anime('Gintama. Shirogane no Tamashii-hen - Kouhan-sen', ['acao', 'comedia', 'drama', 'ciencia_ficcao'], 9.1).
+anime('Shingeki no Kyojin: The Final Season - Kanketsu-hen', ['acao', 'drama', 'fantasia', 'misterio'], 9.0).
+anime('Kusuriya no Hitorigoto', ['drama', 'misterio', 'historico'], 8.6).
+anime('Owarimonogatari 2nd Season', ['comedia', 'misterio', 'psicologico', 'sobrenatural'], 8.9).
+anime('Violet Evergarden Movie', ['drama', 'fantasia'], 8.9).
+anime('Kimi no Na wa.', ['drama', 'romance', 'sobrenatural'], 8.8).
+anime('Kingdom 3rd Season', ['acao', 'drama', 'historico', 'militar'], 8.8).
+anime('Kusuriya no Hitorigoto 2nd Season', ['drama', 'misterio', 'historico'], 8.7).
+anime('Gintama. Shirogane no Tamashii-hen', ['acao', 'comedia', 'drama', 'ciencia_ficcao'], 9.1).
+anime('Shingeki no Kyojin Movie: Kanketsu-hen - The Last Attack', ['acao', 'drama', 'fantasia', 'misterio'], 8.9).
+anime('Vinland Saga Season 2', ['acao', 'aventura', 'drama', 'historico'], 8.8).
+anime('Hajime no Ippo', ['acao', 'comedia', 'drama', 'esporte'], 8.8).
+anime('Kizumonogatari III: Reiketsu-hen', ['acao', 'misterio', 'psicologico', 'sobrenatural'], 8.8).
+anime('Mob Psycho 100 II', ['acao', 'comedia', 'sobrenatural'], 8.8).
+anime('Shingeki no Kyojin: The Final Season', ['acao', 'drama', 'fantasia', 'misterio'], 8.9).
+anime('Sen to Chihiro no Kamikakushi', ['aventura', 'drama', 'fantasia'], 8.6).
+anime('Vinland Saga', ['acao', 'aventura', 'drama', 'historico'], 8.7).
+anime('Haikyuu!! Karasuno Koukou vs. Shiratorizawa Gakuen Koukou', ['comedia', 'drama', 'esporte'], 8.9).
+anime('One Piece', ['action', 'adventure', 'fantasy'], 8.7).
+anime('Shiguang Dailiren', ['drama', 'fantasy', 'mystery'], 8.6).
+anime('The First Slam Dunk', ['drama', 'sports'], 8.7).
+anime('Kimetsu no Yaiba: Yuukaku-hen', ['action', 'fantasy', 'supernatural'], 8.7).
+anime('Kingdom 5th Season', ['action', 'drama', 'historical'], 8.7).
+anime('Mushishi Zoku Shou 2nd Season', ['adventure', 'fantasy', 'supernatural'], 8.8).
+anime('Hibike! Euphonium 3', ['music', 'slice_of_life'], 8.6).
+anime('86 Part 2', ['action', 'drama', 'military', 'sci_fi'], 8.6).
+anime('Chi. Chikyuu no Undou ni Tsuite', ['drama', 'fantasy', 'sci_fi'], 8.5).
+anime('Mob Psycho 100 III', ['action', 'comedy', 'supernatural'], 8.7).
+anime('Rurouni Kenshin: Meiji Kenkaku Romantan - Tsuioku-hen', ['action', 'adventure', 'historical'], 8.7).
+anime('Shouwa Genroku Rakugo Shinjuu: Sukeroku Futatabi-hen', ['drama', 'historical'], 8.8).
+anime('Bleach: Sennen Kessen-hen - Ketsubetsu-tan', ['action', 'supernatural'], 8.7).
+anime('Code Geass: Hangyaku no Lelouch', ['action', 'drama', 'mecha'], 8.7).
+anime('Mushishi Zoku Shou', ['adventure', 'fantasy', 'supernatural'], 8.8).
+anime('Mo Dao Zu Shi: Wanjie Pian', ['action', 'fantasy', 'drama'], 8.8).
+anime('Great Teacher Onizuka', ['comedy', 'drama', 'slice_of_life'], 8.7).
+anime('Violet Evergarden', ['drama', 'fantasy'], 8.7).
+anime('Hajime no Ippo: New Challenger', ['action', 'sports'], 8.7).
+anime('Howl no Ugoku Shiro', ['fantasy', 'adventure'], 8.6).
+anime('Mononoke Hime', ['adventure', 'fantasy'], 8.7).
+anime('Shiguang Dailiren II', ['drama', 'fantasy', 'mystery'], 8.6).
+anime('Fate/stay night Movie: Heaven\'s Feel - III. Spring Song', ['action', 'fantasy'], 8.7).
+anime('Look Back', ['drama', 'slice_of_life'], 8.5).
+anime('Mushishi', ['adventure', 'fantasy', 'supernatural'], 8.7).
+anime('Odd Taxi', ['drama', 'mystery', 'slice_of_life'], 8.6).
+anime('Shigatsu wa Kimi no Uso', ['drama', 'music', 'romance'], 8.6).
+anime('Tengen Toppa Gurren Lagann', ['action', 'adventure', 'mecha'], 8.6).
+anime('Shingeki no Kyojin Season 3', ['action', 'drama', 'fantasy'], 8.8).
+anime('Made in Abyss', ['adventure', 'fantasy', 'drama'], 8.7).
+anime('Natsume Yuujinchou Shi', ['drama', 'supernatural'], 8.6).
+anime('Kaguya-sama wa Kokurasetai? Tensai-tachi no Renai Zunousen', ['comedy', 'romance'], 8.6).
+anime('Ping Pong the Animation', ['drama', 'sports'], 8.6).
+anime('Bungou Stray Dogs 5th Season', ['action', 'mystery', 'supernatural'], 8.5).
+anime('Death Note', ['mystery', 'psychological', 'supernatural'], 8.6).
+anime('Haikyuu!! Second Season', ['action', 'sports'], 8.6).
+anime('Cyberpunk: Edgerunners', ['action', 'sci_fi'], 8.5).
+anime('Made in Abyss Movie 3: Fukaki Tamashii no Reimei', ['adventure', 'fantasy'], 8.7).
+anime('Kenpuu Denki Berserk', ['action', 'adventure', 'fantasy'], 8.5).
+anime('Dungeon Meshi', ['adventure', 'fantasy', 'cooking'], 8.6).
+anime('Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai', ['drama', 'romance', 'supernatural'], 8.5).
+anime('Suzumiya Haruhi no Shoushitsu', ['mystery', 'psychological', 'supernatural'], 8.5).
 
 % Fatos filme(Nome, Lista_de_Generos)
-filme('The Shawshank Redemption', ['drama']).
-filme('The Godfather', ['crime', 'drama']).
-filme('The Dark Knight', ['action', 'crime', 'drama']).
-filme('Schindler\'s List', ['biography', 'drama', 'history']).
-filme('12 Angry Men', ['drama']).
-filme('The Lord of the Rings: The Return of the King', ['action', 'adventure', 'drama']).
-filme('The Godfather Part II', ['crime', 'drama']).
-filme('Pulp Fiction', ['crime', 'drama']).
-filme('The Lord of the Rings: The Fellowship of the Ring', ['action', 'adventure', 'drama']).
-filme('Fight Club', ['drama']).
-filme('Forrest Gump', ['drama', 'romance']).
-filme('The Lord of the Rings: The Two Towers', ['action', 'adventure', 'drama']).
-filme('12th Fail', ['drama']).
-filme('Interstellar', ['adventure', 'drama', 'sci_fi']).
-filme('Goodfellas', ['biography', 'crime', 'drama']).
-filme('One Flew Over the Cuckoo\'s Nest', ['drama']).
-filme('Jai Bhim', ['drama']).
-filme('Se7en', ['crime', 'drama', 'mystery', 'thriller']).
-filme('The Silence of the Lambs', ['crime', 'drama', 'thriller']).
-filme('The Green Mile', ['crime', 'drama', 'fantasy']).
-filme('Saving Private Ryan', ['drama', 'war']).
-filme('City of God', ['crime', 'drama']).
-filme('Life Is Beautiful', ['comedy', 'drama', 'war']).
-filme('It\'s a Wonderful Life', ['drama', 'fantasy']).
-filme('Seven Samurai', ['action', 'drama']).
-filme('Harakiri', ['drama']).
-filme('Dune: Part Two', ['action', 'adventure', 'drama', 'sci_fi']).
-filme('Gladiator', ['action', 'adventure', 'drama']).
-filme('Parasite', ['comedy', 'drama', 'thriller']).
-filme('The Prestige', ['drama', 'mystery', 'sci_fi']).
-filme('The Lion King', ['animation', 'adventure', 'drama']).
-filme('The Departed', ['crime', 'drama', 'thriller']).
-filme('Léon: The Professional', ['action', 'crime', 'drama']).
-filme('Whiplash', ['drama', 'music']).
-filme('The Usual Suspects', ['crime', 'drama', 'mystery', 'thriller']).
-filme('American History X', ['drama']).
-filme('Grave of the Fireflies', ['animation', 'drama', 'war']).
-filme('Psycho', ['horror', 'mystery', 'thriller']).
-filme('Once Upon a Time in the West', ['drama', 'western']).
-filme('The Pianist', ['biography', 'drama', 'music']).
-filme('The Intouchables', ['biography', 'comedy', 'drama']).
-filme('Casablanca', ['drama', 'romance', 'war']).
-filme('Cinema Paradiso', ['drama']).
-filme('Rear Window', ['drama', 'mystery', 'thriller', 'crime']).
-filme('City Lights', ['comedy', 'drama']).
-filme('Modern Times', ['comedy', 'drama']).
-filme('Inglourious Basterds', ['adventure', 'drama', 'war']).
-filme('The Dark Knight Rises', ['action', 'crime', 'drama']).
-filme('Apocalypse Now', ['drama', 'war']).
-filme('The Shining', ['drama', 'horror']).
-filme('Spirited Away', ['animation', 'adventure', 'fantasy']).
-filme('Spider-Man: Across the Spider-Verse', ['animation', 'action', 'adventure']).
-filme('Spider-Man: Into the Spider-Verse', ['animation', 'action', 'adventure']).
-filme('Your Name.', ['animation', 'drama', 'fantasy']).
-filme('Coco', ['animation', 'adventure', 'family']).
-filme('WALL·E', ['animation', 'adventure', 'family']).
-filme('Princess Mononoke', ['animation', 'action', 'adventure']).
-filme('Toy Story', ['animation', 'adventure', 'comedy']).
-filme('Up', ['animation', 'adventure', 'comedy']).
-filme('Toy Story 3', ['animation', 'adventure', 'comedy']).
-filme('The Wild Robot', ['animation', 'adventure', 'family']).
-filme('Howl\'s Moving Castle', ['animation', 'adventure', 'fantasy']).
-filme('Finding Nemo', ['animation', 'adventure', 'comedy']).
-filme('Klaus', ['animation', 'adventure', 'comedy']).
-filme('How to Train Your Dragon', ['animation', 'action', 'adventure']).
-filme('Ratatouille', ['animation', 'adventure', 'comedy']).
-filme('Monsters, Inc.', ['animation', 'adventure', 'comedy']).
-filme('Inside Out', ['animation', 'adventure', 'comedy']).
-filme('My Neighbor Totoro', ['animation', 'family', 'fantasy']).
-filme('A Silent Voice: The Movie', ['animation', 'drama']).
-filme('The Iron Giant', ['animation', 'adventure', 'family']).
-filme('Mary and Max', ['animation', 'drama', 'comedy']).
-filme('The Incredibles', ['animation', 'action', 'adventure']).
-filme('Deadpool & Wolverine', ['action', 'adventure', 'comedy']).
-filme('A Quiet Place: Day One', ['horror', 'thriller']).
-filme('Furiosa: A Mad Max Saga', ['action', 'adventure']).
-filme('Despicable Me 4', ['animation', 'comedy', 'family']).
-filme('Wicked', ['fantasy', 'musical']).
-filme('Mufasa: The Lion King', ['animation', 'adventure', 'family']).
-filme('Kung Fu Panda 4', ['animation', 'action', 'adventure']).
-filme('The Garfield Movie', ['animation', 'comedy', 'family']).
-filme('Sonic the Hedgehog 3', ['action', 'adventure', 'comedy', 'animation']).
-filme('Madame Web', ['action', 'adventure', 'fantasy']).
-filme('Gladiator II', ['action', 'drama']).
-filme('Avatar: The Last Airbender', ['action', 'adventure', 'fantasy']).
-filme('Argylle', ['action', 'thriller']).
-filme('Borderlands', ['action', 'adventure', 'comedy']).
-filme('The Crow', ['action', 'drama', 'fantasy']).
-filme('Paddington in Peru', ['adventure', 'comedy', 'family']).
-filme('Code 8: Part II', ['action', 'drama', 'sci_fi']).
-filme('Ghostbusters: Frozen Empire', ['action', 'comedy', 'fantasy']).
-filme('Godzilla x Kong: The New Empire', ['action', 'adventure', 'sci_fi']).
-filme('Kingdom of the Planet of the Apes', ['action', 'adventure', 'drama']).
-filme('Kraven the Hunter', ['action', 'adventure']).
-filme('The Beekeeper', ['action', 'drama', 'thriller']).
-filme('Damsel', ['action', 'adventure', 'fantasy']).
-filme('Transformers One', ['action', 'adventure', 'sci_fi', 'animation']).
-filme('The Lord of the Rings: The War of the Rohirrim', ['animation', 'action', 'adventure']).
-filme('Speak No Evil', ['horror', 'thriller']).
-filme('IF', ['fantasy', 'family']).
-filme('The Fall Guy', ['action', 'comedy']).
-filme('Abigail', ['action', 'drama', 'thriller']).
-filme('Back to Black', ['biography', 'drama', 'music']).
-filme('Bad Boys: Ride or Die', ['action', 'comedy', 'crime']).
-filme('Inside Out 2', ['animation', 'adventure', 'comedy']).
-filme('Win or Lose', ['animation', 'comedy', 'family']).
-filme('Joker: Folie à Deux', ['crime', 'drama', 'musical']).
-filme('Alien: Romulus', ['horror', 'sci_fi', 'thriller']).
-filme('Venom: The Last Dance', ['action', 'adventure', 'sci_fi']).
-filme('Beetlejuice Beetlejuice', ['comedy', 'fantasy']).
-filme('Challengers', ['drama', 'romance', 'sport']).
-filme('The Strangers: Chapter 1', ['horror', 'thriller']).
-filme('Red One', ['action', 'adventure', 'comedy']).
-filme('Dear Santa', ['comedy', 'family']).
-filme('Carry-On', ['thriller', 'drama']).
-filme('Fallout', ['drama', 'sci_fi']).
-filme('The Brutalist', ['drama', 'historical_fiction']).
-filme('A Real Pain', ['drama', 'comedy_drama']).
-filme('The Substance', ['drama', 'sci_fi', 'body_horror', 'thriller']).
-filme('Anora', ['drama', 'comedy', 'romance']).
-filme('Nosferatu', ['horror', 'drama', 'fantasy', 'gothic_horror']).
-filme('Conclave', ['drama', 'thriller', 'historical_drama']).
-filme('Babygirl', ['drama', 'romance', 'erotic_thriller']).
-filme('Ghostlight', ['drama', 'supernatural']).
-filme('Between the Temples', ['drama', 'comedy']).
-filme('Exhibiting Forgiveness', ['drama', 'family_drama']).
-filme('I Saw the TV Glow', ['drama', 'horror', 'mystery', 'teen_drama']).
-filme('A Complete Unknown', ['drama', 'music', 'biographical_drama']).
-filme('The Order', ['action', 'thriller', 'martial_arts']).
-filme('Oddity', ['drama', 'thriller', 'psychological_thriller']).
-filme('Thelma', ['drama', 'comedy']).
-filme('Civil War', ['drama', 'thriller', 'action', 'dystopian']).
-filme('Rebel Ridge', ['action', 'thriller', 'crime_thriller']).
-filme('Dìdi', ['drama', 'family', 'coming_of_age']).
-filme('Love Lies Bleeding', ['drama', 'romance', 'crime_thriller']).
-filme('Longlegs', ['thriller', 'horror', 'mystery']).
-filme('Saturday Night', ['comedy', 'drama', 'indie_film']).
-filme('Ordinary Angels', ['drama', 'biographical_drama']).
-filme('Suncoast', ['drama', 'coming_of_age']).
-filme('Young Woman and the Sea', ['drama', 'biography', 'sport']).
-filme('The Best Christmas Pageant Ever', ['comedy', 'family', 'christmas']).
-filme('Juror #2', ['drama', 'thriller', 'legal_drama']).
-filme('Better Man', ['biography', 'drama', 'music']).
-filme('The First Omen', ['horror', 'supernatural_horror', 'psychological_horror']).
-filme('Twisters', ['action', 'adventure', 'disaster_film']).
-filme('My Old Ass', ['comedy', 'coming_of_age', 'fantasy']).
-filme('Things Will Be Different', ['drama', 'sci_fi', 'family_drama']).
-filme('Música', ['drama', 'romance', 'musical']).
-filme('Orion and the Dark', ['animation', 'family', 'adventure', 'fantasy']).
-filme('Azrael', ['horror', 'thriller', 'slasher']).
-filme('Drive-Away Dolls', ['comedy', 'action', 'road_movie']).
-filme('Upgraded', ['romance', 'drama', 'comedy']).
-filme('Your Monster', ['comedy', 'fantasy', 'romance']).
-filme('Arcadian', ['drama', 'thriller', 'horror', 'post_apocalyptic']).
-filme('Cuckoo', ['drama', 'thriller', 'horror', 'mystery']).
-filme('Immaculate', ['drama', 'thriller', 'horror', 'religious_horror']).
-filme('Skincare', ['comedy', 'drama', 'satire']).
-filme('A Wednesday', ['drama', 'thriller', 'crime_thriller']).
-filme('Marshland', ['crime', 'drama', 'thriller', 'mystery']).
-filme('Mystic River', ['crime', 'drama', 'mystery', 'neo_noir']).
-filme('The Killing', ['crime', 'drama', 'mystery', 'thriller', 'neo_noir']).
-filme('The Girl with the Dragon Tattoo', ['crime', 'drama', 'mystery', 'thriller', 'neo_noir']).
-filme('Zodiac', ['crime', 'drama', 'mystery', 'thriller', 'neo_noir']).
-filme('L.A. Confidential', ['crime', 'drama', 'mystery', 'neo_noir']).
-filme('Eastern Promises', ['crime', 'drama', 'thriller', 'neo_noir']).
-filme('Oldboy', ['action', 'drama', 'mystery', 'thriller', 'neo_noir', 'revenge_film']).
-filme('Chinatown', ['crime', 'drama', 'mystery', 'neo_noir']).
-filme('Twin Peaks: Fire Walk with Me', ['crime', 'drama', 'mystery', 'surreal', 'horror']).
-filme('Insomnia', ['crime', 'drama', 'mystery', 'thriller', 'neo_noir']).
-filme('Identity', ['crime', 'drama', 'mystery', 'thriller', 'psychological_thriller']).
-filme('In the Valley of Elah', ['crime', 'drama', 'mystery', 'thriller', 'war_drama']).
-filme('Shutter Island', ['drama', 'mystery', 'thriller', 'psychological_thriller', 'neo_noir']).
-filme('The Bridge', ['crime', 'drama', 'mystery', 'thriller', 'psychological_thriller']).
-filme('Top of the Lake', ['crime', 'drama', 'mystery', 'thriller', 'neo_noir']).
-filme('Broadchurch', ['crime', 'drama', 'mystery', 'thriller']).
-filme('The Fall', ['crime', 'drama', 'mystery', 'thriller', 'psychological_thriller']).
-filme('M', ['crime', 'drama', 'thriller', 'early_cinema', 'social_commentary']).
-filme('Primal Fear', ['crime', 'drama', 'thriller', 'legal_thriller', 'psychological_thriller']).
-filme('Citizen X', ['crime', 'drama', 'thriller', 'biographical_crime']).
-filme('A History of Violence', ['crime', 'drama', 'thriller', 'neo_noir']).
-filme('Fargo', ['crime', 'drama', 'thriller', 'black_comedy', 'neo_noir']).
-filme('Memento', ['crime', 'drama', 'mystery', 'thriller', 'neo_noir', 'psychological_thriller']).
-filme('The Chaser', ['crime', 'drama', 'thriller', 'action']).
-filme('Big Bad Wolves', ['crime', 'drama', 'thriller', 'black_comedy', 'horror']).
-filme('Memories of Murder', ['crime', 'drama', 'thriller', 'mystery']).
-filme('The Vanishing', ['crime', 'drama', 'thriller', 'psychological_thriller']).
-filme('The Pledge', ['crime', 'drama', 'thriller', 'mystery']).
-filme('Dirty Harry', ['action', 'crime', 'drama', 'thriller', 'neo_noir']).
-filme('Department Q: The Keeper of Lost Causes', ['crime', 'drama', 'mystery', 'thriller']).
-filme('Wind River', ['crime', 'drama', 'mystery', 'thriller', 'neo_western']).
-filme('Mindhunter', ['crime', 'drama', 'thriller', 'biographical_crime']).
-filme('Sharp Objects', ['crime', 'drama', 'mystery', 'thriller', 'psychological_thriller']).
-filme('Almost Famous', ['drama', 'music', 'comedy_drama', 'coming_of_age']).
-filme('Stardust', ['adventure', 'fantasy', 'romance', 'fairy_tale']).
-filme('28 Days Later', ['drama', 'horror', 'sci_fi', 'zombie_film', 'thriller']).
-filme('Nine Queens', ['crime', 'drama', 'thriller', 'heist_film']).
-filme('Pleasantville', ['comedy', 'drama', 'fantasy', 'satire']).
-filme('Stranger Than Fiction', ['comedy', 'drama', 'fantasy', 'metafiction']).
-filme('Atonement', ['drama', 'romance', 'war', 'period_drama']).
-filme('Blue Velvet', ['crime', 'drama', 'mystery', 'neo_noir', 'surreal']).
-filme('The Name of the Rose', ['crime', 'drama', 'mystery', 'historical_mystery', 'thriller']).
-filme('Frenzy', ['crime', 'drama', 'thriller', 'suspense']).
-filme('Spellbound', ['drama', 'mystery', 'romance', 'psychological_thriller']).
-filme('Sleepers', ['crime', 'drama', 'thriller', 'revenge_film']).
-filme('Dances with Wolves', ['adventure', 'drama', 'western', 'historical_drama']).
-filme('The Thief of Bagdad', ['adventure', 'fantasy', 'silent_film']).
-filme('Noises Off...', ['comedy', 'farce', 'slapstick']).
-filme('Malcolm X', ['biography', 'drama', 'history', 'political_drama']).
-filme('Blow', ['biography', 'crime', 'drama', 'neo_noir']).
-filme('A Simple Plan', ['crime', 'drama', 'thriller', 'neo_noir']).
-filme('Dead Man', ['drama', 'western', 'surreal', 'independent_film']).
-filme('Children of Men', ['drama', 'sci_fi', 'thriller', 'dystopian']).
-filme('Mr. Nobody', ['drama', 'fantasy', 'romance', 'sci_fi']).
-filme('TT3D: Closer to the Edge', ['documentary', 'sport', 'motorcycle_racing']).
-filme('Bonnie and Clyde', ['biography', 'crime', 'drama', 'historical_crime']).
-filme('Biutiful', ['drama', 'tragedy']).
-filme('Cinderella Man', ['biography', 'drama', 'sport', 'boxing']).
-filme('21 Grams', ['drama', 'thriller', 'neo_noir']).
-filme('The Thin Red Line', ['drama', 'war', 'philosophical_film']).
-filme('Black Hawk Down', ['action', 'drama', 'history', 'war_film']).
-filme('Remember the Titans', ['biography', 'drama', 'sport', 'american_football']).
-filme('Sling Blade', ['drama', 'independent_film']).
-filme('Marathon Man', ['drama', 'thriller', 'spy_thriller']).
-filme('Seconds', ['drama', 'sci_fi', 'thriller', 'psychological_thriller']).
-filme('The Assassination of Jesse James by the Coward Robert Ford', ['biography', 'crime', 'drama', 'western']).
-filme('Mirror', ['drama', 'art_film', 'autobiographical']).
-filme('Open Your Eyes', ['drama', 'fantasy', 'romance', 'sci_fi', 'psychological_thriller']).
-filme('Rudy', ['biography', 'drama', 'sport', 'american_football']).
-filme('The Last Emperor', ['biography', 'drama', 'history', 'epic_film']).
-filme('The Holy Mountain', ['adventure', 'drama', 'fantasy', 'surreal', 'cult_film']).
-filme('Carlito\'s Way', ['crime', 'drama', 'thriller', 'neo_noir']).
-filme('The Enigma of Kaspar Hauser', ['biography', 'drama', 'historical_drama']).
-filme('Letters from Iwo Jima', ['action', 'drama', 'history', 'war_film']).
-filme('Disconnect', ['drama', 'thriller', 'social_commentary']).
-filme('Underground', ['drama', 'war', 'comedy_drama', 'surreal']).
-filme('The Hours', ['drama', 'lgbtq', 'adaptation']).
-filme('Mississippi Burning', ['crime', 'drama', 'history', 'racial_drama']).
-filme('Magnolia', ['drama', 'ensemble_film']).
-filme('The Untouchables', ['biography', 'crime', 'drama', 'historical_crime']).
-filme('The Manchurian Candidate', ['drama', 'mystery', 'thriller', 'political_thriller', 'sci_fi']).
-filme('The Conversation', ['drama', 'thriller', 'mystery', 'surveillance_film']).
-filme('All the President\'s Men', ['biography', 'drama', 'history', 'political_thriller', 'journalism']).
-filme('Miller\'s Crossing', ['crime', 'drama', 'thriller', 'neo_noir', 'gangster_film']).
-filme('The Caine Mutiny', ['drama', 'war', 'military_drama', 'courtroom_drama']).
-filme('In the Heat of the Night', ['crime', 'drama', 'mystery', 'racial_drama']).
-filme('The Sound of Music', ['biography', 'drama', 'family', 'musical']).
-filme('Dead Poets Society', ['drama', 'coming_of_age']).
-filme('Crash', ['drama', 'ensemble_film', 'racial_drama']).
-filme('Cabaret', ['drama', 'musical', 'war', 'lgbtq']).
-filme('How Green Was My Valley', ['drama', 'family_saga']).
-filme('The Piano', ['drama', 'romance', 'historical_drama']).
-filme('In the Mood for Love', ['drama', 'romance', 'art_film']).
-filme('Anatomy of a Murder', ['crime', 'drama', 'mystery', 'legal_drama']).
-filme('Spring, Summer, Fall, Winter... and Spring', ['drama', 'art_film']).
-filme('The Graduate', ['comedy', 'drama', 'romance', 'coming_of_age']).
-filme('Fruitvale Station', ['biography', 'drama', 'racial_drama']).
-filme('Glory', ['biography', 'drama', 'war', 'historical_drama', 'racial_drama']).
-filme('Moulin Rouge!', ['drama', 'musical', 'romance', 'fantasy']).
-filme('The Man Who Wasn\'t There', ['crime', 'drama', 'mystery', 'neo_noir', 'black_comedy']).
-filme('Barry Lyndon', ['drama', 'historical_drama', 'war']).
-filme('Mildred Pierce', ['drama', 'melodrama', 'noir']).
-filme('Apollo 13', ['biography', 'drama', 'history', 'adventure']).
-filme('Tora! Tora! Tora!', ['drama', 'history', 'war', 'action']).
-filme('Come and See', ['drama', 'war', 'horror', 'anti_war']).
-filme('Straight Outta Compton', ['biography', 'drama', 'music', 'historical_drama']).
-filme('The Color Purple', ['drama', 'historical_drama', 'family_saga']).
-filme('Dancer in the Dark', ['drama', 'musical', 'tragedy']).
-filme('Office Space', ['comedy', 'satire', 'workplace_comedy']).
-filme('Glengarry Glen Ross', ['drama', 'thriller', 'ensemble_film']).
-filme('Pride & Prejudice', ['drama', 'romance', 'period_drama']).
-filme('Indiana Jones and the Temple of Doom', ['action', 'adventure', 'fantasy']).
-filme('Jane Eyre', ['drama', 'romance', 'gothic_romance', 'period_drama']).
-filme('Talk to Her', ['drama', 'romance', 'dark_comedy']).
-filme('The Lost Daughter', ['drama', 'psychological_drama']).
-filme('Birdman or (The Unexpected Virtue of Ignorance)', ['comedy', 'drama', 'black_comedy', 'satire']).
-filme('Boyhood', ['drama', 'coming_of_age']).
-filme('Two Days, One Night', ['drama', 'social_realism']).
-filme('The Grand Budapest Hotel', ['adventure', 'comedy', 'crime']).
-filme('Gone Girl', ['drama', 'mystery', 'thriller']).
-filme('Nightcrawler', ['crime', 'drama', 'thriller']).
-filme('Mommy', ['drama']).
-filme('Force Majeure', ['drama', 'comedy']).
-filme('Leviathan', ['drama']).
-filme('Selma', ['biography', 'drama', 'history']).
-filme('Foxcatcher', ['biography', 'drama', 'sport']).
-filme('Citizenfour', ['documentary']).
-filme('Winter Sleep', ['drama']).
-filme('Ex Machina', ['drama', 'sci_fi', 'thriller']).
-filme('Wild Tales', ['comedy', 'drama', 'thriller']).
-filme('Mr. Turner', ['biography', 'drama']).
-filme('Inherent Vice', ['comedy', 'crime', 'drama']).
-filme('Guardians of the Galaxy', ['action', 'adventure', 'comedy']).
-filme('The Lego Movie', ['animation', 'action', 'adventure']).
-filme('Big Eyes', ['biography', 'drama']).
-filme('A Most Violent Year', ['crime', 'drama', 'thriller']).
-filme('Frank', ['comedy', 'drama', 'music']).
-filme('Life Itself', ['documentary']).
-filme('Li\'l Quinquin', ['comedy', 'crime', 'drama']).
-filme('Song of the Sea', ['animation', 'adventure', 'family']).
-filme('A Pigeon Sat on a Branch Reflecting on Existence', ['comedy', 'drama']).
-filme('The Rover', ['drama', 'thriller']).
-filme('Calvary', ['comedy', 'drama']).
-filme('\'71', ['action', 'drama', 'thriller']).
-filme('The Babadook', ['drama', 'horror', 'thriller']).
-filme('Predestination', ['action', 'drama', 'sci_fi']).
-filme('Virunga', ['documentary']).
-filme('Pride', ['biography', 'comedy', 'drama']).
-filme('The Imitation Game', ['biography', 'drama', 'thriller']).
-filme('PK', ['comedy', 'drama', 'fantasy']).
-filme('The Look of Silence', ['documentary']).
-filme('The Fault in Our Stars', ['drama', 'romance']).
-filme('Corn Island', ['drama']).
-filme('The Salt of the Earth', ['documentary']).
-filme('Rudderless', ['drama', 'music']).
-filme('Timbuktu', ['drama']).
-filme('Eden', ['drama', 'music']).
-filme('Last Days in Vietnam', ['documentary']).
-filme('You\'re Sleeping, Nicole', ['drama']).
-filme('20,000 Days on Earth', ['documentary']).
-filme('Love Is Strange', ['drama', 'romance']).
-filme('Beyond the Lights', ['drama', 'music', 'romance']).
-filme('The Dark Horse', ['drama']).
-filme('The Tribe', ['drama']).
-filme('Housebound', ['comedy', 'horror']).
-filme('It Follows', ['horror', 'mystery', 'thriller']).
-filme('Maps to the Stars', ['drama']).
-filme('Girlhood', ['drama']).
-filme('The Guest', ['drama', 'thriller']).
-filme('The Duke of Burgundy', ['drama', 'romance']).
-filme('Clouds of Sils Maria', ['drama']).
-filme('Black Coal, Thin Ice', ['crime', 'drama', 'mystery']).
-filme('The Internet\'s Own Boy: The Story of Aaron Swartz', ['documentary']).
-filme('Phoenix', ['drama', 'thriller']).
-filme('When Marnie Was There', ['animation', 'drama', 'family']).
-filme('Gett', ['drama']).
-filme('Dawn of the Planet of the Apes', ['action', 'drama', 'sci_fi']).
-filme('The Normal Heart', ['drama']).
-filme('Suite Française', ['drama', 'romance', 'war']).
-filme('The Drop', ['crime', 'drama', 'thriller']).
-filme('Olive Kitteridge', ['drama', 'mini_series']).
-filme('Edge of Tomorrow', ['action', 'adventure', 'sci_fi']).
-filme('The Wonders', ['drama']).
-filme('Wild', ['biography', 'drama']).
-filme('The Fool', ['drama']).
-filme('Gueros', ['comedy', 'drama']).
-filme('Court', ['drama']).
-filme('Haider', ['drama', 'thriller']).
-filme('The Raid 2', ['action', 'crime', 'thriller']).
-filme('Dear White People', ['comedy', 'drama']).
-filme('The Homesman', ['drama', 'western']).
-filme('Testament of Youth', ['biography', 'drama', 'romance']).
-filme('The Skeleton Twins', ['comedy', 'drama']).
-filme('Love & Mercy', ['biography', 'drama', 'music']).
-filme('The Theory of Everything', ['biography', 'drama', 'romance']).
-filme('Paddington', ['adventure', 'comedy', 'family']).
-filme('The Overnighters', ['documentary']).
-filme('Obvious Child', ['comedy', 'drama']).
-filme('Horse Money', ['drama']).
-filme('Land Ho!', ['comedy', 'drama']).
-filme('H.', ['drama']).
-filme('Into the Woods', ['fantasy', 'musical']).
-filme('Return to Zero', ['drama']).
-filme('Unlikely Heroes', ['drama']).
-filme('From What Is Before', ['drama']).
-filme('Marie\'s Story', ['biography', 'drama']).
-filme('A Borrowed Identity', ['drama']).
-filme('Tour de Force', ['drama']).
-filme('The Hundred-Foot Journey', ['drama', 'comedy']).
-filme('That Sugar Film', ['documentary']).
-filme('10.000 Km', ['drama', 'romance']).
-filme('All This Mayhem', ['documentary']).
-filme('The Water Diviner', ['drama', 'war']).
-filme('Margarita with a Straw', ['drama', 'romance']).
-filme('When the Ocean Met the Sky', ['drama']).
-filme('Magical Girl', ['drama']).
-filme('Welcome to Me', ['comedy', 'drama']).
-filme('While We\'re Young', ['comedy', 'drama']).
-filme('Black Souls', ['drama']).
-filme('A Most Wanted Man', ['thriller']).
-filme('The Artist', ['drama', 'romance']).
-filme('Charade', ['comedy', 'romance', 'thriller']).
-filme('Duck Soup', ['comedy', 'war']).
-filme('Witness for the Prosecution', ['crime', 'drama', 'mystery']).
-filme('Bicycle Thieves', ['drama']).
-filme('Persona', ['drama', 'mystery']).
-filme('The Grapes of Wrath', ['drama']).
-filme('Nosferatu: A Symphony of Horror', ['horror']).
-filme('His Girl Friday', ['comedy', 'drama', 'romance']).
-filme('Double Indemnity', ['crime', 'drama', 'film_noir']).
-filme('Battleship Potemkin', ['drama', 'history', 'war']).
-filme('Sherlock Jr.', ['comedy', 'short']).
-filme('Roman Holiday', ['comedy', 'romance']).
-filme('Like Stars on Earth', ['drama', 'family']).
-filme('The Cabinet of Dr. Caligari', ['drama', 'horror']).
-filme('Wild Strawberries', ['drama']).
-filme('The Virgin Spring', ['drama', 'thriller']).
-filme('The 400 Blows', ['drama']).
-filme('The Battle of Algiers', ['drama', 'history', 'war']).
-filme('Ikiru', ['drama']).
-filme('Sanjuro', ['action', 'drama']).
-filme('La Dolce Vita', ['drama']).
-filme('High and Low', ['crime', 'drama', 'thriller']).
-filme('La Jetée', ['drama', 'sci_fi', 'short']).
-filme('Tokyo Story', ['drama']).
-filme('The Red Shoes', ['drama', 'music', 'romance']).
-filme('Umberto D.', ['drama']).
-filme('The Wages of Fear', ['drama', 'thriller']).
-filme('The Passion of Joan of Arc', ['biography', 'drama', 'history']).
-filme('Ugetsu', ['drama', 'fantasy', 'history']).
-filme('The Gold Rush', ['adventure', 'comedy', 'romance']).
-filme('Nights of Cabiria', ['drama']).
-filme('The Rules of the Game', ['comedy', 'drama']).
-filme('The Life and Death of Colonel Blimp', ['drama', 'war']).
-filme('Army of Shadows', ['drama', 'thriller', 'war']).
-filme('The Lady Vanishes', ['mystery', 'thriller']).
-filme('The Hidden Fortress', ['adventure', 'action']).
-filme('Ballad of a Soldier', ['drama', 'war']).
-filme('Man with a Movie Camera', ['documentary']).
-filme('Rio Bravo', ['drama', 'western']).
-filme('The Red Balloon', ['family', 'fantasy', 'short']).
-filme('Samurai Rebellion', ['drama', 'action']).
-filme('Paper Moon', ['comedy', 'drama']).
-filme('Children of Paradise', ['drama', 'romance']).
-filme('Rang De Basanti', ['drama', 'history']).
-filme('Ace in the Hole', ['drama', 'thriller']).
-filme('Children of Heaven', ['drama', 'family']).
-filme('The Last Laugh', ['drama']).
-filme('Udaan', ['drama']).
-filme('The Twilight Samurai', ['drama', 'romance']).
-filme('The Return', ['drama']).
-filme('The Thin Blue Line', ['documentary']).
-filme('National Geographic Explorer', ['documentary']).
-filme('The Corporation', ['documentary']).
-filme('Zeitgeist', ['documentary']).
-filme('Shadows of a Leader: Qaddafi\'s Female Bodyguards', ['documentary']).
-filme('The Union: The Business Behind Getting High', ['documentary']).
-filme('Chops', ['documentary']).
-filme('Semper Fi: Always Faithful', ['documentary']).
-filme('No End in Sight', ['documentary']).
-filme('It\'s Always Sunny in Philadelphia', ['comedy']).
-filme('Hachi: A Dog\'s Tale', ['drama']).
+filme('The Shawshank Redemption', ['drama'], 9.3).
+filme('The Godfather', ['crime', 'drama'], 9.2).
+filme('The Dark Knight', ['action', 'crime', 'drama'], 9.0).
+filme('Schindler\'s List', ['biography', 'drama', 'history'], 9.0).
+filme('12 Angry Men', ['drama'], 9.0).
+filme('The Lord of the Rings: The Return of the King', ['action', 'adventure', 'drama'], 9.0).
+filme('The Godfather Part II', ['crime', 'drama'], 9.0).
+filme('Pulp Fiction', ['crime', 'drama'], 8.9).
+filme('The Lord of the Rings: The Fellowship of the Ring', ['action', 'adventure', 'drama'], 8.9).
+filme('Fight Club', ['drama'], 8.8).
+filme('Forrest Gump', ['drama', 'romance'], 8.8).
+filme('The Lord of the Rings: The Two Towers', ['action', 'adventure', 'drama'], 8.8).
+filme('12th Fail', ['drama'], 8.8).
+filme('Interstellar', ['adventure', 'drama', 'sci_fi'], 8.7).
+filme('Goodfellas', ['biography', 'crime', 'drama'], 8.7).
+filme('One Flew Over the Cuckoo\'s Nest', ['drama'], 8.7).
+filme('Jai Bhim', ['drama'], 8.7).
+filme('Se7en', ['crime', 'drama', 'mystery', 'thriller'], 8.6).
+filme('The Silence of the Lambs', ['crime', 'drama', 'thriller'], 8.6).
+filme('The Green Mile', ['crime', 'drama', 'fantasy'], 8.6).
+filme('Saving Private Ryan', ['drama', 'war'], 8.6).
+filme('City of God', ['crime', 'drama'], 8.6).
+filme('Life Is Beautiful', ['comedy', 'drama', 'war'], 8.6).
+filme('It\'s a Wonderful Life', ['drama', 'fantasy'], 8.6).
+filme('Seven Samurai', ['action', 'drama'], 8.6).
+filme('Harakiri', ['drama'], 8.6).
+filme('Dune: Part Two', ['action', 'adventure', 'drama', 'sci_fi'], 8.6).
+filme('Gladiator', ['action', 'adventure', 'drama'], 8.5).
+filme('Parasite', ['comedy', 'drama', 'thriller'], 8.5).
+filme('The Prestige', ['drama', 'mystery', 'sci_fi'], 8.5).
+filme('The Lion King', ['animation', 'adventure', 'drama'], 8.5).
+filme('The Departed', ['crime', 'drama', 'thriller'], 8.5).
+filme('Léon: The Professional', ['action', 'crime', 'drama'], 8.5).
+filme('Whiplash', ['drama', 'music'], 8.5).
+filme('The Usual Suspects', ['crime', 'drama', 'mystery', 'thriller'], 8.5).
+filme('American History X', ['drama'], 8.5).
+filme('Grave of the Fireflies', ['animation', 'drama', 'war'], 8.5).
+filme('Psycho', ['horror', 'mystery', 'thriller'], 8.5).
+filme('Once Upon a Time in the West', ['drama', 'western'], 8.5).
+filme('The Pianist', ['biography', 'drama', 'music'], 8.5).
+filme('The Intouchables', ['biography', 'comedy', 'drama'], 8.5).
+filme('Casablanca', ['drama', 'romance', 'war'], 8.5).
+filme('Cinema Paradiso', ['drama'], 8.5).
+filme('Rear Window', ['drama', 'mystery', 'thriller', 'crime'], 8.5).
+filme('City Lights', ['comedy', 'drama'], 8.5).
+filme('Modern Times', ['comedy', 'drama'], 8.5).
+filme('Inglourious Basterds', ['adventure', 'drama', 'war'], 8.3).
+filme('The Dark Knight Rises', ['action', 'crime', 'drama'], 8.4).
+filme('Apocalypse Now', ['drama', 'war'], 8.4).
+filme('The Shining', ['drama', 'horror'], 8.4).
+filme('Spirited Away', ['animation', 'adventure', 'fantasy'], 8.6).
+filme('Spider-Man: Across the Spider-Verse', ['animation', 'action', 'adventure'], 8.6).
+filme('Spider-Man: Into the Spider-Verse', ['animation', 'action', 'adventure'], 8.4).
+filme('Your Name.', ['animation', 'drama', 'fantasy'], 8.4).
+filme('Coco', ['animation', 'adventure', 'family'], 8.4).
+filme('WALL·E', ['animation', 'adventure', 'family'], 8.4).
+filme('Princess Mononoke', ['animation', 'action', 'adventure'], 8.4).
+filme('Toy Story', ['animation', 'adventure', 'comedy'], 8.3).
+filme('Up', ['animation', 'adventure', 'comedy'], 8.3).
+filme('Toy Story 3', ['animation', 'adventure', 'comedy'], 8.3).
+filme('The Wild Robot', ['animation', 'adventure', 'family'], 8.2).
+filme('Howl\'s Moving Castle', ['animation', 'adventure', 'fantasy'], 8.2).
+filme('Finding Nemo', ['animation', 'adventure', 'comedy'], 8.2).
+filme('Klaus', ['animation', 'adventure', 'comedy'], 8.2).
+filme('How to Train Your Dragon', ['animation', 'action', 'adventure'], 8.1).
+filme('Ratatouille', ['animation', 'adventure', 'comedy'], 8.1).
+filme('Monsters, Inc.', ['animation', 'adventure', 'comedy'], 8.1).
+filme('Inside Out', ['animation', 'adventure', 'comedy'], 8.1).
+filme('My Neighbor Totoro', ['animation', 'family', 'fantasy'], 8.2).
+filme('A Silent Voice: The Movie', ['animation', 'drama'], 8.1).
+filme('The Iron Giant', ['animation', 'adventure', 'family'], 8.1).
+filme('Mary and Max', ['animation', 'drama', 'comedy'], 8.1).
+filme('The Incredibles', ['animation', 'action', 'adventure'], 8.0).
+filme('Deadpool & Wolverine', ['action', 'adventure', 'comedy'], 8.1).
+filme('A Quiet Place: Day One', ['horror', 'thriller'], 7.5).
+filme('Furiosa: A Mad Max Saga', ['action', 'adventure'], 7.9).
+filme('Despicable Me 4', ['animation', 'comedy', 'family'], 7.2).
+filme('Kung Fu Panda 4', ['animation', 'action', 'adventure'], 7.1).
+filme('The Garfield Movie', ['animation', 'comedy', 'family'], 6.8).
+filme('Madame Web', ['action', 'adventure', 'fantasy'], 3.8).
+filme('Avatar: The Last Airbender', ['action', 'adventure', 'fantasy'], 5.7).
+filme('Argylle', ['action', 'thriller'], 6.0).
+filme('The Crow', ['action', 'drama', 'fantasy'], 7.5).
+filme('Code 8: Part II', ['action', 'drama', 'sci_fi'], 6.1).
+filme('Ghostbusters: Frozen Empire', ['action', 'comedy', 'fantasy'], 6.5).
+filme('Godzilla x Kong: The New Empire', ['action', 'adventure', 'sci_fi'], 6.3).
+filme('Kingdom of the Planet of the Apes', ['action', 'adventure', 'drama'], 7.0).
+filme('The Beekeeper', ['action', 'drama', 'thriller'], 6.4).
+filme('Damsel', ['action', 'adventure', 'fantasy'], 6.2).
+filme('Speak No Evil', ['horror', 'thriller'], 6.5).
+filme('IF', ['fantasy', 'family'], 6.8).
+filme('The Fall Guy', ['action', 'comedy'], 7.2).
+filme('Abigail', ['action', 'drama', 'thriller'], 6.5).
+filme('Back to Black', ['biography', 'drama', 'music'], 6.5).
+filme('Bad Boys: Ride or Die', ['action', 'comedy', 'crime'], 6.6).
+filme('Inside Out 2', ['animation', 'adventure', 'comedy'], 8.0).
+filme('Dear Santa', ['comedy', 'family'], 6.2).
+filme('Carry-On', ['thriller', 'drama'], 5.8).
+filme('Fallout', ['drama', 'sci_fi'], 7.3).
+filme('The Brutalist', ['drama', 'historical_fiction'], 6.7).
+filme('A Real Pain', ['drama', 'comedy_drama'], 7.1).
+filme('The Substance', ['drama', 'sci_fi', 'body_horror', 'thriller'], 7.5).
+filme('Anora', ['drama', 'comedy', 'romance'], 7.8).
+filme('Nosferatu', ['horror', 'drama', 'fantasy', 'gothic_horror'], 7.9).
+filme('Conclave', ['drama', 'thriller', 'historical_drama'], 6.5).
+filme('Babygirl', ['drama', 'romance', 'erotic_thriller'], 6.3).
+filme('Ghostlight', ['drama', 'supernatural'], 7.0).
+filme('Between the Temples', ['drama', 'comedy'], 6.8).
+filme('Exhibiting Forgiveness', ['drama', 'family_drama'], 6.9).
+filme('I Saw the TV Glow', ['drama', 'horror', 'mystery', 'teen_drama'], 7.2).
+filme('The Order', ['action', 'thriller', 'martial_arts'], 5.9).
+filme('Oddity', ['drama', 'thriller', 'psychological_thriller'], 7.1).
+filme('Thelma', ['drama', 'comedy'], 7.0).
+filme('Civil War', ['drama', 'thriller', 'action', 'dystopian'], 7.4).
+filme('Rebel Ridge', ['action', 'thriller', 'crime_thriller'], 6.6).
+filme('Dìdi', ['drama', 'family', 'coming_of_age'], 7.3).
+filme('Love Lies Bleeding', ['drama', 'romance', 'crime_thriller'], 7.0).
+filme('Longlegs', ['thriller', 'horror', 'mystery'], 7.6).
+filme('Saturday Night', ['comedy', 'drama', 'indie_film'], 6.4).
+filme('Ordinary Angels', ['drama', 'biographical_drama'], 7.2).
+filme('Suncoast', ['drama', 'coming_of_age'], 6.9).
+filme('Young Woman and the Sea', ['drama', 'biography', 'sport'], 7.5).
+filme('The Best Christmas Pageant Ever', ['comedy', 'family', 'christmas'], 6.1).
+filme('Better Man', ['biography', 'drama', 'music'], 6.8).
+filme('The First Omen', ['horror', 'supernatural_horror', 'psychological_horror'], 6.7).
+filme('Twisters', ['action', 'adventure', 'disaster_film'], 7.0).
+filme('My Old Ass', ['comedy', 'coming_of_age', 'fantasy'], 7.2).
+filme('Things Will Be Different', ['drama', 'sci_fi', 'family_drama'], 6.5).
+filme('Música', ['drama', 'romance', 'musical'], 6.9).
+filme('Orion and the Dark', ['animation', 'family', 'adventure', 'fantasy'], 6.8).
+filme('Azrael', ['horror', 'thriller', 'slasher'], 5.9).
+filme('Drive-Away Dolls', ['comedy', 'action', 'road_movie'], 6.2).
+filme('Upgraded', ['romance', 'drama', 'comedy'], 6.5).
+filme('Your Monster', ['comedy', 'fantasy', 'romance'], 6.7).
+filme('Arcadian', ['drama', 'thriller', 'horror', 'post_apocalyptic'], 6.3).
+filme('Cuckoo', ['drama', 'thriller', 'horror', 'mystery'], 6.5).
+filme('Immaculate', ['drama', 'thriller', 'horror', 'religious_horror'], 6.7).
+filme('Skincare', ['comedy', 'drama', 'satire'], 6.0).
+filme('A Wednesday', ['drama', 'thriller', 'crime_thriller'], 8.1).
+filme('Marshland', ['crime', 'drama', 'thriller', 'mystery'], 7.4).
+filme('Mystic River', ['crime', 'drama', 'mystery', 'neo_noir'], 8.0).
+filme('The Killing', ['crime', 'drama', 'mystery', 'thriller', 'neo_noir'], 8.3).
+filme('The Girl with the Dragon Tattoo', ['crime', 'drama', 'mystery', 'thriller', 'neo_noir'], 7.8).
+filme('Zodiac', ['crime', 'drama', 'mystery', 'thriller', 'neo_noir'], 7.7).
+filme('L.A. Confidential', ['crime', 'drama', 'mystery', 'neo_noir'], 8.2).
+filme('Eastern Promises', ['crime', 'drama', 'thriller', 'neo_noir'], 7.6).
+filme('Oldboy', ['action', 'drama', 'mystery', 'thriller', 'neo_noir', 'revenge_film'], 8.4).
+filme('Chinatown', ['crime', 'drama', 'mystery', 'neo_noir'], 8.2).
+filme('Twin Peaks: Fire Walk with Me', ['crime', 'drama', 'mystery', 'surreal', 'horror'], 7.3).
+filme('Insomnia', ['crime', 'drama', 'mystery', 'thriller', 'neo_noir'], 7.2).
+filme('Identity', ['crime', 'drama', 'mystery', 'thriller', 'psychological_thriller'], 7.3).
+filme('In the Valley of Elah', ['crime', 'drama', 'mystery', 'thriller', 'war_drama'], 7.1).
+filme('Shutter Island', ['drama', 'mystery', 'thriller', 'psychological_thriller', 'neo_noir'], 8.2).
+filme('The Bridge', ['crime', 'drama', 'mystery', 'thriller', 'psychological_thriller'], 8.6).
+filme('Top of the Lake', ['crime', 'drama', 'mystery', 'thriller', 'neo_noir'], 7.5).
+filme('Broadchurch', ['crime', 'drama', 'mystery', 'thriller'], 8.4).
+filme('The Fall', ['crime', 'drama', 'mystery', 'thriller', 'psychological_thriller'], 8.3).
+filme('M', ['crime', 'drama', 'thriller', 'early_cinema', 'social_commentary'], 8.3).
+filme('Primal Fear', ['crime', 'drama', 'thriller', 'legal_thriller', 'psychological_thriller'], 7.7).
+filme('Citizen X', ['crime', 'drama', 'thriller', 'biographical_crime'], 7.7).
+filme('A History of Violence', ['crime', 'drama', 'thriller', 'neo_noir'], 7.4).
+filme('Fargo', ['crime', 'drama', 'thriller', 'black_comedy', 'neo_noir'], 8.1).
+filme('Memento', ['crime', 'drama', 'mystery', 'thriller', 'neo_noir', 'psychological_thriller'], 8.4).
+filme('The Chaser', ['crime', 'drama', 'thriller', 'action'], 7.8).
+filme('Big Bad Wolves', ['crime', 'drama', 'thriller', 'black_comedy', 'horror'], 7.1).
+filme('Memories of Murder', ['crime', 'drama', 'thriller', 'mystery'], 8.1).
+filme('The Vanishing', ['crime', 'drama', 'thriller', 'psychological_thriller'], 7.8).
+filme('The Pledge', ['crime', 'drama', 'thriller', 'mystery'], 7.0).
+filme('Dirty Harry', ['action', 'crime', 'drama', 'thriller', 'neo_noir'], 7.7).
+filme('Department Q: The Keeper of Lost Causes', ['crime', 'drama', 'mystery', 'thriller'], 7.4).
+filme('Wind River', ['crime', 'drama', 'mystery', 'thriller', 'neo_western'], 7.7).
+filme('Mindhunter', ['crime', 'drama', 'thriller', 'biographical_crime'], 8.6).
+filme('Sharp Objects', ['crime', 'drama', 'mystery', 'thriller', 'psychological_thriller'], 8.1).
+filme('Almost Famous', ['drama', 'music', 'comedy_drama', 'coming_of_age'], 7.9).
+filme('Stardust', ['adventure', 'fantasy', 'romance', 'fairy_tale'], 7.6).
+filme('28 Days Later', ['drama', 'horror', 'sci_fi', 'zombie_film', 'thriller'], 7.6).
+filme('Nine Queens', ['crime', 'drama', 'thriller', 'heist_film'], 7.8).
+filme('Pleasantville', ['comedy', 'drama', 'fantasy', 'satire'], 7.5).
+filme('Stranger Than Fiction', ['comedy', 'drama', 'fantasy', 'metafiction'], 7.6).
+filme('Atonement', ['drama', 'romance', 'war', 'period_drama'], 7.8).
+filme('Blue Velvet', ['crime', 'drama', 'mystery', 'neo_noir', 'surreal'], 7.7).
+filme('The Name of the Rose', ['crime', 'drama', 'mystery', 'historical_mystery', 'thriller'], 7.7).
+filme('Frenzy', ['crime', 'drama', 'thriller', 'suspense'], 7.4).
+filme('Spellbound', ['drama', 'mystery', 'romance', 'psychological_thriller'], 7.6).
+filme('Sleepers', ['crime', 'drama', 'thriller', 'revenge_film'], 7.6).
+filme('Dances with Wolves', ['adventure', 'drama', 'western', 'historical_drama'], 8.0).
+filme('The Thief of Bagdad', ['adventure', 'fantasy', 'silent_film'], 7.4).
+filme('Noises Off...', ['comedy', 'farce', 'slapstick'], 7.1).
+filme('Malcolm X', ['biography', 'drama', 'history', 'political_drama'], 7.7).
+filme('Blow', ['biography', 'crime', 'drama', 'neo_noir'], 7.5).
+filme('A Simple Plan', ['crime', 'drama', 'thriller', 'neo_noir'], 7.5).
+filme('Dead Man', ['drama', 'western', 'surreal', 'independent_film'], 7.5).
+filme('Children of Men', ['drama', 'sci_fi', 'thriller', 'dystopian'], 7.9).
+filme('Mr. Nobody', ['drama', 'fantasy', 'romance', 'sci_fi'], 7.8).
+filme('TT3D: Closer to the Edge', ['documentary', 'sport', 'motorcycle_racing'], 8.1).
+filme('Bonnie and Clyde', ['biography', 'crime', 'drama', 'historical_crime'], 7.7).
+filme('Biutiful', ['drama', 'tragedy'], 7.6).
+filme('Cinderella Man', ['biography', 'drama', 'sport', 'boxing'], 8.0).
+filme('21 Grams', ['drama', 'thriller', 'neo_noir'], 7.6).
+filme('The Thin Red Line', ['drama', 'war', 'philosophical_film'], 7.6).
+filme('Black Hawk Down', ['action', 'drama', 'history', 'war_film'], 7.7).
+filme('Remember the Titans', ['biography', 'drama', 'sport', 'american_football'], 7.8).
+filme('Sling Blade', ['drama', 'independent_film'], 8.0).
+filme('Marathon Man', ['drama', 'thriller', 'spy_thriller'], 7.5).
+filme('Seconds', ['drama', 'sci_fi', 'thriller', 'psychological_thriller'], 7.6).
+filme('The Assassination of Jesse James by the Coward Robert Ford', ['biography', 'crime', 'drama', 'western'], 7.5).
+filme('Mirror', ['drama', 'art_film', 'autobiographical'], 8.0).
+filme('Open Your Eyes', ['drama', 'fantasy', 'romance', 'sci_fi', 'psychological_thriller'], 7.7).
+filme('Rudy', ['biography', 'drama', 'sport', 'american_football'], 7.5).
+filme('The Last Emperor', ['biography', 'drama', 'history', 'epic_film'], 7.7).
+filme('The Holy Mountain', ['adventure', 'drama', 'fantasy', 'surreal', 'cult_film'], 7.7).
+filme('Carlito\'s Way', ['crime', 'drama', 'thriller', 'neo_noir'], 7.9).
+filme('The Enigma of Kaspar Hauser', ['biography', 'drama', 'historical_drama'], 8.0).
+filme('Letters from Iwo Jima', ['action', 'drama', 'history', 'war_film'], 7.9).
+filme('Disconnect', ['drama', 'thriller', 'social_commentary'], 7.5).
+filme('Underground', ['drama', 'war', 'comedy_drama', 'surreal'], 8.1).
+filme('The Hours', ['drama', 'lgbtq', 'adaptation'], 7.5).
+filme('Mississippi Burning', ['crime', 'drama', 'history', 'racial_drama'], 7.8).
+filme('Magnolia', ['drama', 'ensemble_film'], 8.0).
+filme('The Untouchables', ['biography', 'crime', 'drama', 'historical_crime'], 7.9).
+filme('The Manchurian Candidate', ['drama', 'mystery', 'thriller', 'political_thriller', 'sci_fi'], 7.9).
+filme('The Conversation', ['drama', 'thriller', 'mystery', 'surveillance_film'], 7.8).
+filme('All the President\'s Men', ['biography', 'drama', 'history', 'political_thriller', 'journalism'], 8.0).
+filme('Miller\'s Crossing', ['crime', 'drama', 'thriller', 'neo_noir', 'gangster_film'], 7.7).
+filme('The Caine Mutiny', ['drama', 'war', 'military_drama', 'courtroom_drama'], 7.7).
+filme('In the Heat of the Night', ['crime', 'drama', 'mystery', 'racial_drama'], 7.9).
+filme('The Sound of Music', ['biography', 'drama', 'family', 'musical'], 8.1).
+filme('Dead Poets Society', ['drama', 'coming_of_age'], 8.1).
+filme('Crash', ['drama', 'ensemble_film', 'racial_drama'], 7.7).
+filme('Cabaret', ['drama', 'musical', 'war', 'lgbtq'], 7.8).
+filme('How Green Was My Valley', ['drama', 'family_saga'], 7.7).
+filme('The Piano', ['drama', 'romance', 'historical_drama'], 7.5).
+filme('In the Mood for Love', ['drama', 'romance', 'art_film'], 8.1).
+filme('Anatomy of a Murder', ['crime', 'drama', 'mystery', 'legal_drama'], 7.9).
+filme('Spring, Summer, Fall, Winter... and Spring', ['drama', 'art_film'], 8.0).
+filme('The Graduate', ['comedy', 'drama', 'romance', 'coming_of_age'], 8.0).
+filme('Fruitvale Station', ['biography', 'drama', 'racial_drama'], 7.5).
+filme('Glory', ['biography', 'drama', 'war', 'historical_drama', 'racial_drama'], 7.8).
+filme('Moulin Rouge!', ['drama', 'musical', 'romance', 'fantasy'], 7.6).
+filme('The Man Who Wasn\'t There', ['crime', 'drama', 'mystery', 'neo_noir', 'black_comedy'], 7.5).
+filme('Barry Lyndon', ['drama', 'historical_drama', 'war'], 8.1).
+filme('Mildred Pierce', ['drama', 'melodrama', 'noir'], 8.0).
+filme('Apollo 13', ['biography', 'drama', 'history', 'adventure'], 7.7).
+filme('Tora! Tora! Tora!', ['drama', 'history', 'war', 'action'], 7.5).
+filme('Come and See', ['drama', 'war', 'horror', 'anti_war'], 8.4).
+filme('Straight Outta Compton', ['biography', 'drama', 'music', 'historical_drama'], 7.8).
+filme('The Color Purple', ['drama', 'historical_drama', 'family_saga'], 7.7).
+filme('Dancer in the Dark', ['drama', 'musical', 'tragedy'], 7.9).
+filme('Office Space', ['comedy', 'satire', 'workplace_comedy'], 7.7).
+filme('Glengarry Glen Ross', ['drama', 'thriller', 'ensemble_film'], 7.7).
+filme('Pride & Prejudice', ['drama', 'romance', 'period_drama'], 7.8).
+filme('Indiana Jones and the Temple of Doom', ['action', 'adventure', 'fantasy'], 7.5).
+filme('Jane Eyre', ['drama', 'romance', 'gothic_romance', 'period_drama'], 7.3).
+filme('Talk to Her', ['drama', 'romance', 'dark_comedy'], 7.9).
+filme('The Lost Daughter', ['drama', 'psychological_drama'], 6.7).
+filme('Birdman or (The Unexpected Virtue of Ignorance)', ['comedy', 'drama', 'black_comedy', 'satire'], 7.7).
+filme('Boyhood', ['drama', 'coming_of_age'], 7.9).
+filme('Two Days, One Night', ['drama', 'social_realism'], 7.4).
+filme('The Grand Budapest Hotel', ['adventure', 'comedy', 'crime'], 8.1).
+filme('Gone Girl', ['drama', 'mystery', 'thriller'], 8.1).
+filme('Nightcrawler', ['crime', 'drama', 'thriller'], 7.8).
+filme('Mommy', ['drama'], 8.1).
+filme('Force Majeure', ['drama', 'comedy'], 7.2).
+filme('Leviathan', ['drama'], 7.6).
+filme('Selma', ['biography', 'drama', 'history'], 7.5).
+filme('Foxcatcher', ['biography', 'drama', 'sport'], 7.0).
+filme('Citizenfour', ['documentary'], 8.1).
+filme('Winter Sleep', ['drama'], 8.2).
+filme('Ex Machina', ['drama', 'sci_fi', 'thriller'], 7.7).
+filme('Wild Tales', ['comedy', 'drama', 'thriller'], 8.1).
+filme('Mr. Turner', ['biography', 'drama'], 6.8).
+filme('Inherent Vice', ['comedy', 'crime', 'drama'], 6.6).
+filme('Guardians of the Galaxy', ['action', 'adventure', 'comedy'], 8.0).
+filme('The Lego Movie', ['animation', 'action', 'adventure'], 7.7).
+filme('Big Eyes', ['biography', 'drama'], 7.0).
+filme('A Most Violent Year', ['crime', 'drama', 'thriller'], 6.9).
+filme('Frank', ['comedy', 'drama', 'music'], 6.9).
+filme('Life Itself', ['documentary'], 7.8).
+filme('Li\'l Quinquin', ['comedy', 'crime', 'drama'], 7.2).
+filme('Song of the Sea', ['animation', 'adventure', 'family'], 8.1).
+filme('A Pigeon Sat on a Branch Reflecting on Existence', ['comedy', 'drama'], 7.0).
+filme('The Rover', ['drama', 'thriller'], 6.4).
+filme('Calvary', ['comedy', 'drama'], 7.4).
+filme('\'71', ['action', 'drama', 'thriller'], 7.2).
+filme('The Babadook', ['drama', 'horror', 'thriller'], 6.8).
+filme('Predestination', ['action', 'drama', 'sci_fi'], 7.5).
+filme('Virunga', ['documentary'], 8.3).
+filme('Pride', ['biography', 'comedy', 'drama'], 7.8).
+filme('The Imitation Game', ['biography', 'drama', 'thriller'], 8.0).
+filme('PK', ['comedy', 'drama', 'fantasy'], 8.1).
+filme('The Look of Silence', ['documentary'], 8.3).
+filme('The Fault in Our Stars', ['drama', 'romance'], 7.7).
+filme('Corn Island', ['drama'], 7.5).
+filme('The Salt of the Earth', ['documentary'], 8.2).
+filme('Rudderless', ['drama', 'music'], 7.5).
+filme('Timbuktu', ['drama'], 7.4).
+filme('Eden', ['drama', 'music'], 7.1).
+filme('Last Days in Vietnam', ['documentary'], 8.0).
+filme('You\'re Sleeping, Nicole', ['drama'], 6.8).
+filme('20,000 Days on Earth', ['documentary'], 7.6).
+filme('Love Is Strange', ['drama', 'romance'], 6.8).
+filme('Beyond the Lights', ['drama', 'music', 'romance'], 7.1).
+filme('The Dark Horse', ['drama'], 7.5).
+filme('The Tribe', ['drama'], 7.4).
+filme('Housebound', ['comedy', 'horror'], 6.8).
+filme('It Follows', ['horror', 'mystery', 'thriller'], 6.8).
+filme('Maps to the Stars', ['drama'], 6.2).
+filme('Girlhood', ['drama'], 7.4).
+filme('The Guest', ['drama', 'thriller'], 6.7).
+filme('The Duke of Burgundy', ['drama', 'romance'], 6.8).
+filme('Clouds of Sils Maria', ['drama'], 6.7).
+filme('Black Coal, Thin Ice', ['crime', 'drama', 'mystery'], 6.9).
+filme('The Internet\'s Own Boy: The Story of Aaron Swartz', ['documentary'], 8.1).
+filme('Phoenix', ['drama', 'thriller'], 7.4).
+filme('When Marnie Was There', ['animation', 'drama', 'family'], 7.7).
+filme('Gett', ['drama'], 7.5).
+filme('Dawn of the Planet of the Apes', ['action', 'drama', 'sci_fi'], 7.6).
+filme('The Normal Heart', ['drama'], 7.7).
+filme('Suite Française', ['drama', 'romance', 'war'], 7.0).
+filme('The Drop', ['crime', 'drama', 'thriller'], 7.1).
+filme('Olive Kitteridge', ['drama', 'mini_series'], 8.3).
+filme('Edge of Tomorrow', ['action', 'adventure', 'sci_fi'], 7.9).
+filme('The Wonders', ['drama'], 7.0).
+filme('Wild', ['biography', 'drama'], 7.1).
+filme('The Fool', ['drama'], 7.4).
+filme('Gueros', ['comedy', 'drama'], 7.3).
+filme('Court', ['drama'], 7.6).
+filme('Haider', ['drama', 'thriller'], 8.2).
+filme('The Raid 2', ['action', 'crime', 'thriller'], 8.0).
+filme('Dear White People', ['comedy', 'drama'], 6.1).
+filme('The Homesman', ['drama', 'western'], 6.6).
+filme('Testament of Youth', ['biography', 'drama', 'romance'], 7.3).
+filme('The Skeleton Twins', ['comedy', 'drama'], 6.8).
+filme('Love & Mercy', ['biography', 'drama', 'music'], 7.0).
+filme('The Theory of Everything', ['biography', 'drama', 'romance'], 7.7).
+filme('Paddington', ['adventure', 'comedy', 'family'], 7.2).
+filme('The Overnighters', ['documentary'], 7.8).
+filme('Obvious Child', ['comedy', 'drama'], 6.6).
+filme('Horse Money', ['drama'], 6.8).
+filme('Land Ho!', ['comedy', 'drama'], 6.5).
+filme('H.', ['drama'], 5.8).
+filme('Into the Woods', ['fantasy', 'musical'], 5.9).
+filme('Return to Zero', ['drama'], 7.1).
+filme('Unlikely Heroes', ['drama'], 7.4).
+filme('From What Is Before', ['drama'], 7.5).
+filme('Marie\'s Story', ['biography', 'drama'], 7.4).
+filme('A Borrowed Identity', ['drama'], 7.5).
+filme('Tour de Force', ['drama'], 6.9).
+filme('The Hundred-Foot Journey', ['drama', 'comedy'], 7.3).
+filme('That Sugar Film', ['documentary'], 7.5).
+filme('10.000 Km', ['drama', 'romance'], 6.9).
+filme('All This Mayhem', ['documentary'], 7.8).
+filme('The Water Diviner', ['drama', 'war'], 7.1).
+filme('Margarita with a Straw', ['drama', 'romance'], 7.5).
+filme('When the Ocean Met the Sky', ['drama'], 6.5).
+filme('Magical Girl', ['drama'], 7.1).
+filme('Welcome to Me', ['comedy', 'drama'], 6.2).
+filme('While We\'re Young', ['comedy', 'drama'], 6.3).
+filme('Black Souls', ['drama'], 7.0).
+filme('A Most Wanted Man', ['thriller'], 6.8).
+filme('The Artist', ['drama', 'romance'], 7.9).
+filme('Charade', ['comedy', 'romance', 'thriller'], 7.9).
+filme('Duck Soup', ['comedy', 'war'], 7.8).
+filme('Witness for the Prosecution', ['crime', 'drama', 'mystery'], 8.4).
+filme('Bicycle Thieves', ['drama'], 8.3).
+filme('Persona', ['drama', 'mystery'], 8.1).
+filme('The Grapes of Wrath', ['drama'], 8.1).
+filme('Nosferatu: A Symphony of Horror', ['horror'], 7.9).
+filme('His Girl Friday', ['comedy', 'drama', 'romance'], 7.9).
+filme('Double Indemnity', ['crime', 'drama', 'film_noir'], 8.3).
+filme('Battleship Potemkin', ['drama', 'history', 'war'], 8.0).
+filme('Sherlock Jr.', ['comedy', 'short'], 8.2).
+filme('Roman Holiday', ['comedy', 'romance'], 8.0).
+filme('Like Stars on Earth', ['drama', 'family'], 8.3).
+filme('The Cabinet of Dr. Caligari', ['drama', 'horror'], 8.1).
+filme('Wild Strawberries', ['drama'], 8.1).
+filme('The Virgin Spring', ['drama', 'thriller'], 8.1).
+filme('The 400 Blows', ['drama'], 8.1).
+filme('The Battle of Algiers', ['drama', 'history', 'war'], 8.1).
+filme('Ikiru', ['drama'], 8.3).
+filme('Sanjuro', ['action', 'drama'], 8.1).
+filme('La Dolce Vita', ['drama'], 8.0).
+filme('High and Low', ['crime', 'drama', 'thriller'], 8.4).
+filme('La Jetée', ['drama', 'sci_fi', 'short'], 8.3).
+filme('Tokyo Story', ['drama'], 8.1).
+filme('The Red Shoes', ['drama', 'music', 'romance'], 8.1).
+filme('Umberto D.', ['drama'], 8.1).
+filme('The Wages of Fear', ['drama', 'thriller'], 8.2).
+filme('The Passion of Joan of Arc', ['biography', 'drama', 'history'], 8.1).
+filme('Ugetsu', ['drama', 'fantasy', 'history'], 8.2).
+filme('The Gold Rush', ['adventure', 'comedy', 'romance'], 8.1).
+filme('Nights of Cabiria', ['drama'], 8.1).
+filme('The Rules of the Game', ['comedy', 'drama'], 8.0).
+filme('The Life and Death of Colonel Blimp', ['drama', 'war'], 8.0).
+filme('Army of Shadows', ['drama', 'thriller', 'war'], 8.1).
+filme('The Lady Vanishes', ['mystery', 'thriller'], 7.8).
+filme('The Hidden Fortress', ['adventure', 'action'], 8.2).
+filme('Ballad of a Soldier', ['drama', 'war'], 8.1).
+filme('Man with a Movie Camera', ['documentary'], 8.4).
+filme('Rio Bravo', ['drama', 'western'], 8.0).
+filme('The Red Balloon', ['family', 'fantasy', 'short'], 8.1).
+filme('Samurai Rebellion', ['drama', 'action'], 8.1).
+filme('Paper Moon', ['comedy', 'drama'], 8.1).
+filme('Children of Paradise', ['drama', 'romance'], 8.3).
+filme('Rang De Basanti', ['drama', 'history'], 8.2).
+filme('Ace in the Hole', ['drama', 'thriller'], 8.2).
+filme('Children of Heaven', ['drama', 'family'], 8.3).
+filme('The Last Laugh', ['drama'], 8.1).
+filme('Udaan', ['drama'], 8.3).
+filme('The Twilight Samurai', ['drama', 'romance'], 8.1).
+filme('The Return', ['drama'], 8.0).
+filme('The Thin Blue Line', ['documentary'], 8.0).
+filme('National Geographic Explorer', ['documentary'], 8.3).
+filme('The Corporation', ['documentary'], 8.1).
+filme('Zeitgeist', ['documentary'], 7.2).
+filme('Shadows of a Leader: Qaddafi\'s Female Bodyguards', ['documentary'], 7.5).
+filme('The Union: The Business Behind Getting High', ['documentary'], 7.8).
+filme('Chops', ['documentary'], 7.7).
+filme('Semper Fi: Always Faithful', ['documentary'], 7.9).
+filme('No End in Sight', ['documentary'], 8.1).
+filme('It\'s Always Sunny in Philadelphia', ['comedy'], 8.8).
+filme('Hachi: A Dog\'s Tale', ['drama'], 8.1).
