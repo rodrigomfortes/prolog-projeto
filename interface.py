@@ -8,6 +8,9 @@ prolog = Prolog()
 # Carregar o código Prolog no Python
 prolog.consult("filmes.pl")  
 
+# Lista de filmes assistidos com seus gêneros
+filmes_assistidos = []
+
 # Função para obter recomendações (Top 3 filmes)
 def recomendar_filmes():
     gostos = gostos_entry.get().split(',')
@@ -33,11 +36,32 @@ def recomendar_filmes():
                 filmes_recomendados.insert(tk.END, f"{filme.replace('_', ' ').title()} - Nota: {nota}\n")
                 count += 1
 
-# Função para marcar filme como assistido
+# Função para marcar filme como assistido com gênero
 def marcar_assistido():
     filme_assistido = filme_entry.get().strip().lower().replace(" ", "_")  # Garantir que o filme está no formato correto
+    genero = gostos_entry.get().strip().lower().replace(" ", "_")  # Usar a mesma entrada de gênero dos gostos
     prolog.assertz(f"assistido({filme_assistido})")
-    status_label.config(text=f"Filme '{filme_assistido.replace('_', ' ').title()}' marcado como assistido.")
+    filmes_assistidos.append((filme_assistido, genero))  # Armazenar o filme com o gênero
+    status_label.config(text=f"Filme '{filme_assistido.replace('_', ' ').title()}' do gênero '{genero.replace('_', ' ').title()}' marcado como assistido.")
+
+# Função para exibir filmes assistidos de acordo com o gênero
+def exibir_filmes_assistidos():
+    filmes_recomendados.delete(1.0, tk.END)  # Limpar a área de recomendação
+    genero = gostos_entry.get().strip().lower().replace(" ", "_")  # Usar a mesma entrada para o gênero
+
+    filmes_assistidos_filtrados = [filme for filme, gen in filmes_assistidos if gen == genero]
+
+    if filmes_assistidos_filtrados:  # Se houver filmes assistidos do gênero
+        filmes_recomendados.insert(tk.END, f"Filmes Assistidos ({genero.replace('_', ' ').title()}):\n\n")
+        for filme in filmes_assistidos_filtrados:
+            filmes_recomendados.insert(tk.END, f"{filme.replace('_', ' ').title()}\n")
+    else:
+        filmes_recomendados.insert(tk.END, f"Nenhum filme assistido encontrado para o gênero '{genero.replace('_', ' ').title()}'.\n")
+
+# Função para exibir filmes recomendados
+def exibir_filmes_recomendados():
+    filmes_recomendados.delete(1.0, tk.END)  # Limpar a área de recomendação
+    recomendar_filmes()  # Exibir os filmes recomendados
 
 # Interface gráfica com Tkinter
 root = tk.Tk()
@@ -77,8 +101,15 @@ gostos_entry.pack(pady=5)
 btn_recomendar = tk.Button(root, text="Recomendar Filmes", font=font_entrada, bg=btn_color, fg=text_color, bd=0, relief="flat", padx=10, pady=5)
 btn_recomendar.bind("<Enter>", lambda e: on_button_hover(e, btn_recomendar, btn_color_hover))
 btn_recomendar.bind("<Leave>", lambda e: on_button_leave(e, btn_recomendar, btn_color))
-btn_recomendar.config(command=recomendar_filmes)
+btn_recomendar.config(command=exibir_filmes_recomendados)
 btn_recomendar.pack(pady=20)
+
+# Botão "Filmes Assistidos"
+btn_assistidos = tk.Button(root, text="Filmes Assistidos", font=font_entrada, bg=highlight_color, fg=text_color, bd=0, relief="flat", padx=10, pady=5)
+btn_assistidos.bind("<Enter>", lambda e: on_button_hover(e, btn_assistidos, "#e68917"))
+btn_assistidos.bind("<Leave>", lambda e: on_button_leave(e, btn_assistidos, highlight_color))
+btn_assistidos.config(command=exibir_filmes_assistidos)
+btn_assistidos.pack(pady=10)
 
 # Área de recomendação
 filmes_recomendados = tk.Text(root, height=10, width=50, font=font_entrada, bd=2, relief="solid", wrap="word", fg=text_color_2, bg=input_bg_color, insertbackground="white", highlightthickness=2, highlightbackground=highlight_color)
