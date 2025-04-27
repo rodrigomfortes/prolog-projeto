@@ -159,6 +159,8 @@ filme(zootopia, animacao).
 nota(zootopia, 8.0).
 filme(big_hero_6, animacao).
 nota(big_hero_6, 7.8).
+
+% Terror
 filme(o_exorcista, terror).
 nota(o_exorcista, 8.0).
 filme(psicose, terror).
