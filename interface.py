@@ -13,9 +13,9 @@ def recomendar_conteudos():
     tipo = tipo_var.get()  # Tipo escolhido: Filme, Série ou Anime
     genero = genero_var.get().lower()  # Gênero escolhido pelo usuário (convertido para minúsculas)
     
+    filmes_recomendados.config(state="normal")
     filmes_recomendados.delete(1.0, tk.END)  # Limpar a lista de conteúdos recomendados
     
-    # Ajustar a consulta dependendo do tipo de conteúdo e gênero
     if tipo == "Filme":
         query = "top_3_filmes([{}], Top3)".format(genero)  
     elif tipo == "Serie":
@@ -30,7 +30,6 @@ def recomendar_conteudos():
     else:
         count = 0
         filmes_recomendados.insert(tk.END, f"Top 3 {tipo}s recomendados ({genero}):\n\n")
-        # O resultado agora será uma lista com 3 filmes, séries ou animes
         for item in result:
             conteudo_lista = item["Top3"]  
             for conteudo_info in conteudo_lista:
@@ -38,6 +37,7 @@ def recomendar_conteudos():
                 nota = conteudo_info[1]  
                 filmes_recomendados.insert(tk.END, f"{conteudo.replace('_', ' ').title()} - Nota: {nota}\n")
                 count += 1
+    filmes_recomendados.config(state="disabled")  # Desabilitar a edição após atualizar o conteúdo
 
 # Função para marcar conteúdo como assistido (Filme, Série ou Anime)
 def marcar_assistido():
@@ -57,6 +57,7 @@ def marcar_assistido():
 
 # Função para exibir conteúdos assistidos de acordo com o tipo
 def exibir_conteudos_assistidos():
+    filmes_recomendados.config(state="normal")
     filmes_recomendados.delete(1.0, tk.END)  # Limpar a área de recomendação
     tipo = tipo_var.get().strip().lower().replace(" ", "_")  # Usar a mesma entrada para o tipo
 
@@ -73,16 +74,18 @@ def exibir_conteudos_assistidos():
     if assistidos:  # Se houver conteúdos assistidos do tipo
         filmes_recomendados.insert(tk.END, f"Conteúdos Assistidos ({tipo.replace('_', ' ').title()}):\n\n")
         for item in assistidos:
-            conteudo = item["Conteudo"].replace('_', ' ').title()  # Formatando a exibição
+            conteudo = item["Conteudo"].replace('_', ' ').title()  
             filmes_recomendados.insert(tk.END, f"{conteudo}\n")
     else:
         filmes_recomendados.insert(tk.END, f"Nenhum conteúdo assistido encontrado para o tipo '{tipo.replace('_', ' ').title()}'.\n")
-
+    filmes_recomendados.config(state="disabled") 
 
 # Função para exibir conteúdos recomendados
 def exibir_conteudos_recomendados():
+    filmes_recomendados.config(state="normal")  # Habilitar a edição temporariamente para alterar o conteúdo
     filmes_recomendados.delete(1.0, tk.END)  # Limpar a área de recomendação
     recomendar_conteudos()  # Exibir os conteúdos recomendados
+    filmes_recomendados.config(state="disabled")  # Desabilitar a edição após atualizar o conteúdo
 
 # Função para formatar o gênero (primeira letra maiúscula)
 def formatar_genero(genero):
@@ -118,7 +121,7 @@ def on_button_leave(event, button, color):
     button.config(bg=color)
 
 # Título "Selecione o gênero e o tipo de conteúdo"
-tk.Label(root, text="Selecione o gênero e o tipo de conteúdo", font=font_titulo, bg=bg_color, fg=text_color).pack(pady=(30, 5))
+tk.Label(root, text="Escolha o tipo de conteúdo e o gênero preferido", font=font_titulo, bg=bg_color, fg=text_color).pack(pady=(30, 5))
 
 # Criar um frame para os filtros (Tipo de Conteúdo e Gênero)
 frame_filtros = tk.Frame(root, bg=bg_color)
@@ -137,7 +140,7 @@ generos = ["acao", "ficcao", "aventura", "fantasia", "drama", "terror", "comedia
 
 # Criar o menu de gêneros, exibindo a primeira letra maiúscula
 genero_var = tk.StringVar()
-genero_var.set("Acao")  # Valor inicial (pode ser qualquer valor relevante)
+genero_var.set("Acao")  # Genero inicial
 
 genero_menu = tk.OptionMenu(frame_filtros, genero_var, *[formatar_genero(g) for g in generos])
 genero_menu.config(font=font_entrada, bg=input_bg_color, fg=bg_color)
@@ -164,6 +167,7 @@ frame_botoes.pack(pady=20)  # Empacotar o frame na interface
 
 # Área de recomendação
 filmes_recomendados = tk.Text(root, height=10, width=50, font=font_entrada, bd=2, relief="solid", wrap="word", fg=text_color_2, bg=input_bg_color, insertbackground="white", highlightthickness=2, highlightbackground=highlight_color)
+filmes_recomendados.config(state="disabled")  # Desabilitar a edição
 filmes_recomendados.pack(pady=(10, 20))
 
 # Entrada para marcar conteúdo como assistido
