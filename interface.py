@@ -8,9 +8,6 @@ prolog = Prolog()
 # Carregar o código Prolog no Python
 prolog.consult("recomendacao.pl")
 
-# Lista de conteúdos assistidos com seus gêneros
-conteudos_assistidos = []
-
 # Função para recomendar conteúdos com base no tipo (Filme, Série, Anime)
 def recomendar_conteudos():
     gostos = gostos_entry.get().split(',')
@@ -47,23 +44,41 @@ def recomendar_conteudos():
 def marcar_assistido():
     conteudo_assistido = conteudo_entry.get().strip().lower().replace(" ", "_")  # Garantir que o conteúdo está no formato correto
     tipo = tipo_var.get()  # Tipo escolhido: Filme, Série ou Anime
-    prolog.assertz(f"assistido({conteudo_assistido})")
-    conteudos_assistidos.append((conteudo_assistido, tipo))  # Armazenar o conteúdo com o tipo
+    
+    # Ajustando para usar o Prolog para marcar como assistido
+    if tipo == "Filme":
+        prolog.assertz(f"assistido(filme, {conteudo_assistido})")
+    elif tipo == "Série":
+        prolog.assertz(f"assistido(serie, {conteudo_assistido})")
+    elif tipo == "Anime":
+        prolog.assertz(f"assistido(anime, {conteudo_assistido})")
+    
     status_label.config(text=f"'{conteudo_assistido.replace('_', ' ').title()}' do tipo '{tipo}' marcado como assistido.")
+    conteudo_entry.delete(0, tk.END)
 
 # Função para exibir conteúdos assistidos de acordo com o tipo
 def exibir_conteudos_assistidos():
     filmes_recomendados.delete(1.0, tk.END)  # Limpar a área de recomendação
     tipo = tipo_var.get().strip().lower().replace(" ", "_")  # Usar a mesma entrada para o tipo
 
-    conteudos_assistidos_filtrados = [conteudo for conteudo, t in conteudos_assistidos if t == tipo]
+    # Consultar os conteúdos assistidos no Prolog usando o predicado correto
+    if tipo == "filme":
+        consulta = f"assistido(filme, Conteudo)"
+    elif tipo == "serie":
+        consulta = f"assistido(serie, Conteudo)"
+    elif tipo == "anime":
+        consulta = f"assistido(anime, Conteudo)"
+    
+    assistidos = list(prolog.query(consulta))
 
-    if conteudos_assistidos_filtrados:  # Se houver conteúdos assistidos do tipo
+    if assistidos:  # Se houver conteúdos assistidos do tipo
         filmes_recomendados.insert(tk.END, f"Conteúdos Assistidos ({tipo.replace('_', ' ').title()}):\n\n")
-        for conteudo in conteudos_assistidos_filtrados:
-            filmes_recomendados.insert(tk.END, f"{conteudo.replace('_', ' ').title()}\n")
+        for item in assistidos:
+            conteudo = item["Conteudo"].replace('_', ' ').title()  # Formatando a exibição
+            filmes_recomendados.insert(tk.END, f"{conteudo}\n")
     else:
         filmes_recomendados.insert(tk.END, f"Nenhum conteúdo assistido encontrado para o tipo '{tipo.replace('_', ' ').title()}'.\n")
+
 
 # Função para exibir conteúdos recomendados
 def exibir_conteudos_recomendados():

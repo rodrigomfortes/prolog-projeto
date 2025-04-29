@@ -1,7 +1,8 @@
 % Carregar a base de dados
-consult('dados.pl').
+:- consult('dados.pl').
 
 :- dynamic assistido/1.
+:- dynamic assistido/2.
 :- discontiguous filme/2.
 :- discontiguous serie/2.
 :- discontiguous anime/2.
@@ -54,5 +55,26 @@ first_n(N, [X|T], [X|Result]) :-
 first_n(0, _, []).
 
 % Marcar filme, série ou anime como assistido
-marcar_assistido(Filme) :-
-    assert(assistido(Filme)).
+marcar_assistido(Filme) :- 
+    filme(Filme, _), 
+    assert(assistido(filme, Filme)).
+
+marcar_assistido(Serie) :- 
+    serie(Serie, _), 
+    assert(assistido(serie, Serie)).
+
+marcar_assistido(Anime) :- 
+    anime(Anime, _), 
+    assert(assistido(anime, Anime)).
+
+% Consultar filmes assistidos
+assistidos_filmes(ListaFilmes) :-
+    findall(Filme, assistido(filme, Filme), ListaFilmes).
+
+% Consultar séries assistidas
+assistidos_series(ListaSeries) :-
+    findall(Serie, assistido(serie, Serie), ListaSeries).
+
+% Consultar animes assistidos
+assistidos_animes(ListaAnimes) :-
+    findall(Anime, assistido(anime, Anime), ListaAnimes).
