@@ -1,49 +1,54 @@
 % Carregar a base de dados
 :- consult('dados.pl').
 
-:- dynamic assistido/1.
 :- dynamic assistido/2.
-:- discontiguous filme/2.
-:- discontiguous serie/2.
-:- discontiguous anime/2.
-:- discontiguous nota/2.
+:- dynamic filme/2.
+:- dynamic serie/2.
+:- dynamic anime/2.
+:- dynamic nota/2.
 
 % Recomendação de filmes, séries e animes com base em gênero e nota
 recomendar(Gostos, Filme, Nota) :-
     filme(Filme, Genero),
     nota(Filme, Nota),
     member(Genero, Gostos),
-    \+ assistido(Filme).
+    \+ assistido(filme, Filme).  % Verifica se o filme não foi assistido
 
 recomendar_serie(Gostos, Serie, Nota) :-
     serie(Serie, Genero),
     nota(Serie, Nota),
     member(Genero, Gostos),
-    \+ assistido(Serie).
+    \+ assistido(serie, Serie).  % Verifica se a série não foi assistida
 
 recomendar_anime(Gostos, Anime, Nota) :-
     anime(Anime, Genero),
     nota(Anime, Nota),
     member(Genero, Gostos),
-    \+ assistido(Anime).
+    \+ assistido(anime, Anime).  % Verifica se o anime não foi assistido
 
-% Top 3 filmes baseados no gosto do usuário
+% Top 3 filmes baseados no gosto do usuário (embora ordenado e removendo duplicatas)
 top_3_filmes(Gostos, Top3) :-
     findall([Filme, Nota], recomendar(Gostos, Filme, Nota), Filmes),
-    sort(2, @>=, Filmes, FilmesOrdenados),
-    first_n(3, FilmesOrdenados, Top3).
+    random_permutation(Filmes, FilmesEmbaralhados),  % Embaralha os filmes
+    sort(2, @>=, FilmesEmbaralhados, FilmesOrdenados),
+    remove_duplicados(FilmesOrdenados, [], FilmesSemDuplicatas),
+    first_n(3, FilmesSemDuplicatas, Top3).
 
-% Top 3 séries baseadas no gosto do usuário
+% Top 3 séries baseadas no gosto do usuário (embora ordenado e removendo duplicatas)
 top_3_series(Gostos, Top3) :-
     findall([Serie, Nota], recomendar_serie(Gostos, Serie, Nota), Series),
-    sort(2, @>=, Series, SeriesOrdenadas),
-    first_n(3, SeriesOrdenadas, Top3).
+    random_permutation(Series, SeriesEmbaralhadas),  % Embaralha as séries
+    sort(2, @>=, SeriesEmbaralhadas, SeriesOrdenadas),
+    remove_duplicados(SeriesOrdenadas, [], SeriesSemDuplicatas),
+    first_n(3, SeriesSemDuplicatas, Top3).
 
-% Top 3 animes baseados no gosto do usuário
+% Top 3 animes baseados no gosto do usuário (embora ordenado e removendo duplicatas)
 top_3_animes(Gostos, Top3) :-
     findall([Anime, Nota], recomendar_anime(Gostos, Anime, Nota), Animes),
-    sort(2, @>=, Animes, AnimesOrdenados),
-    first_n(3, AnimesOrdenados, Top3).
+    random_permutation(Animes, AnimesEmbaralhados),  % Embaralha os animes
+    sort(2, @>=, AnimesEmbaralhados, AnimesOrdenados),
+    remove_duplicados(AnimesOrdenados, [], AnimesSemDuplicatas),
+    first_n(3, AnimesSemDuplicatas, Top3).
 
 % Auxiliar para pegar os 3 primeiros filmes, séries ou animes da lista ordenada
 first_n(N, [X|T], [X|Result]) :- 
@@ -53,6 +58,12 @@ first_n(N, [X|T], [X|Result]) :-
 
 % Caso N seja 0, retorne uma lista vazia
 first_n(0, _, []).
+
+% Função para remover duplicados da lista
+remove_duplicados([], Result, Result).  % Caso base: lista vazia, retorna a lista de resultados final
+remove_duplicados([H|T], Result, FinalResult) :-
+    % Verifica se o conteúdo H já está na lista de resultados
+    (member(H, Result) -> remove_duplicados(T, Result, FinalResult) ; remove_duplicados(T, [H|Result], FinalResult)).
 
 % Marcar filme, série ou anime como assistido
 marcar_assistido(Filme) :- 
