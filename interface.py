@@ -11,7 +11,7 @@ prolog.consult("recomendacao.pl")
 # Função para recomendar conteúdos com base no tipo (Filme, Série, Anime) e gênero
 def recomendar_conteudos():
     tipo = tipo_var.get()  # Tipo escolhido: Filme, Série ou Anime
-    genero = genero_var.get()  # Gênero escolhido pelo usuário
+    genero = genero_var.get().lower()  # Gênero escolhido pelo usuário (convertido para minúsculas)
     
     filmes_recomendados.delete(1.0, tk.END)  # Limpar a lista de conteúdos recomendados
     
@@ -84,6 +84,10 @@ def exibir_conteudos_recomendados():
     filmes_recomendados.delete(1.0, tk.END)  # Limpar a área de recomendação
     recomendar_conteudos()  # Exibir os conteúdos recomendados
 
+# Função para formatar o gênero (primeira letra maiúscula)
+def formatar_genero(genero):
+    return genero.capitalize()
+
 # Interface gráfica com Tkinter
 root = tk.Tk()
 root.title("Recomendação de Conteúdos")
@@ -128,11 +132,14 @@ tipo_menu = tk.OptionMenu(frame_filtros, tipo_var, "Filme", "Serie", "Anime")
 tipo_menu.config(font=font_entrada, bg=input_bg_color, fg=bg_color)
 tipo_menu.pack(side="left", padx=10)
 
-# Criar o filtro de gênero
-genero_var = tk.StringVar()
-genero_var.set("acao")  # Valor inicial (pode ser qualquer valor relevante)
+# Gêneros com a primeira letra minúscula para a busca
+generos = ["acao", "ficcao", "aventura", "fantasia", "drama", "terror", "comedia"]
 
-genero_menu = tk.OptionMenu(frame_filtros, genero_var, "acao", "ficcao", "aventura", "fantasia", "drama", "terror", "comedia")
+# Criar o menu de gêneros, exibindo a primeira letra maiúscula
+genero_var = tk.StringVar()
+genero_var.set("Acao")  # Valor inicial (pode ser qualquer valor relevante)
+
+genero_menu = tk.OptionMenu(frame_filtros, genero_var, *[formatar_genero(g) for g in generos])
 genero_menu.config(font=font_entrada, bg=input_bg_color, fg=bg_color)
 genero_menu.pack(side="left", padx=10)
 
