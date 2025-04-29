@@ -13,10 +13,10 @@ filme(gladiador, acao).
 filme(vingadores, acao).
 filme(o_protegido, acao).
 filme(vingadores_guerra_infinita, acao).
-filme(mission_impossible_fallout, acao).
+filme(missao_impossivel_fallout, acao).
 filme(skyfall, acao).
 filme(john_wick, acao).
-filme(the_dark_knight_rises, acao).
+filme(o_cavaleiro_das_trevas_ressurge, acao).
 
 % Notas dos filmes
 nota(matrix, 8.7).
@@ -25,10 +25,10 @@ nota(gladiador, 8.5).
 nota(vingadores, 8.4).
 nota(o_protegido, 7.3).
 nota(vingadores_guerra_infinita, 8.5).
-nota(mission_impossible_fallout, 8.0).
+nota(missao_impossivel_fallout, 8.0).
 nota(skyfall, 8.0).
 nota(john_wick, 7.8).
-nota(the_dark_knight_rises, 8.4).
+nota(o_cavaleiro_das_trevas_ressurge, 8.4).
 
 % Séries
 serie(la_casa_de_papel, acao).
@@ -70,7 +70,7 @@ filme(a_chegada, ficcao).
 filme(o_senhor_dos_aneis, ficcao).
 filme(matrix_reloaded, ficcao).
 filme(her, ficcao).
-filme(inception, ficcao).
+filme(origem, ficcao).
 filme(a_maquina_do_tempo, ficcao).
 
 % Notas dos filmes de ficção
@@ -83,7 +83,7 @@ nota(a_chegada, 7.9).
 nota(o_senhor_dos_aneis, 8.8).
 nota(matrix_reloaded, 7.2).
 nota(her, 8.0).
-nota(inception, 8.8).
+nota(origem, 8.8).
 nota(a_maquina_do_tempo, 7.5).
 
 % Séries de ficção
@@ -117,42 +117,42 @@ nota(ergon, 8.4).
 % Aventura
 
 % Filmes de aventura
-filme(jurassic_park, aventura).
+filme(parque_jurassico, aventura).
 filme(o_senhor_dos_aneis_o_retorno_do_rei, aventura).
 filme(harry_potter_e_a_pedra_filosofal, aventura).
 filme(o_hobbit_uma_viagem_inesperada, aventura).
 filme(piratas_do_caribe, aventura).
 filme(quest_for_fire, aventura).
-filme(the_lord_of_the_rings_the_two_towers, aventura).
+filme(o_senhor_dos_aneis_as_duas_torres, aventura).
 filme(narnia, aventura).
-filme(guardians_of_the_galaxy, aventura).
-filme(marvels_the_avengers, aventura).
+filme(guardiões_da_galaxia, aventura).
+filme(os_vingadores, aventura).
 
 % Notas dos filmes de aventura
-nota(jurassic_park, 8.1).
+nota(parque_jurassico, 8.1).
 nota(o_senhor_dos_aneis_o_retorno_do_rei, 9.0).
 nota(harry_potter_e_a_pedra_filosofal, 8.3).
 nota(o_hobbit_uma_viagem_inesperada, 7.8).
 nota(piratas_do_caribe, 8.0).
 nota(quest_for_fire, 7.0).
-nota(the_lord_of_the_rings_the_two_towers, 8.7).
+nota(o_senhor_dos_aneis_as_duas_torres, 8.7).
 nota(narnia, 7.5).
-nota(guardians_of_the_galaxy, 8.0).
-nota(marvels_the_avengers, 8.0).
+nota(guardiões_da_galaxia, 8.0).
+nota(os_vingadores, 8.0).
 
 % Séries de aventura
-serie(game_of_thrones, aventura).
-serie(friends, aventura).
+serie(jogo_dos_tronos, aventura).
+serie(amigos, aventura).
 serie(o_hobbit, aventura).
 serie(stranger_things, aventura).
-serie(piratas_do_carambo, aventura).
+serie(the_witcher, aventura).
 
 % Notas das séries de aventura
-nota(game_of_thrones, 9.3).
-nota(friends, 8.9).
+nota(jogo_dos_tronos, 9.3).
+nota(amigos, 8.9).
 nota(o_hobbit, 8.1).
 nota(stranger_things, 8.8).
-nota(piratas_do_carambo, 7.6).
+nota(the_witcher, 8.0).
 
 % Animes de aventura
 anime(spirit_digger, aventura).
@@ -185,18 +185,18 @@ nota(o_senhor_dos_aneis_as_duas_torres, 8.7).
 nota(o_senhor_dos_aneis_o_retorno_do_rei, 9.0).
 
 % Séries de fantasia
-serie(the_witcher, fantasia).
-serie(game_of_thrones, fantasia).
+serie(o_witcher, fantasia).
+serie(jogo_dos_tronos, fantasia).
 serie(stranger_things, fantasia).
 serie(the_shannara_chronicles, fantasia).
-serie(the_mandalorian, fantasia).
+serie(a_mandaloriana, fantasia).
 
 % Notas das séries de fantasia
-nota(the_witcher, 8.0).
-nota(game_of_thrones, 9.3).
+nota(o_witcher, 8.0).
+nota(jogo_dos_tronos, 9.3).
 nota(stranger_things, 8.8).
 nota(the_shannara_chronicles, 7.6).
-nota(the_mandalorian, 8.6).
+nota(a_mandaloriana, 8.6).
 
 % Animes de fantasia
 anime(jojos_bizarre_adventure, fantasia).
@@ -230,15 +230,15 @@ nota(a_lista_de_schindler, 9.0).
 
 % Séries de drama
 serie(breaking_bad, drama).
-serie(the_office, drama).
-serie(friends, drama).
+serie(o_office, drama).
+serie(amigos, drama).
 serie(bojack_horseman, drama).
 serie(the_crown, drama).
 
 % Notas das séries de drama
 nota(breaking_bad, 9.5).
-nota(the_office, 8.8).
-nota(friends, 8.9).
+nota(o_office, 8.8).
+nota(amigos, 8.9).
 nota(bojack_horseman, 8.4).
 nota(the_crown, 8.7).
 
@@ -337,18 +337,18 @@ nota(alguem_ali, 8.2).
 nota(o_grande_grande_amor, 8.6).
 
 % Séries de comédia
-serie(friends, comedia).
+serie(amigos, comedia).
 serie(breaking_bad, comedia).
 serie(comedians_in_cars_getting_coffee, comedia).
 serie(schitts_creek, comedia).
-serie(office_us, comedia).
+serie(o_office_us, comedia).
 
 % Notas das séries de comédia
-nota(friends, 8.9).
+nota(amigos, 8.9).
 nota(breaking_bad, 9.5).
 nota(comedians_in_cars_getting_coffee, 8.5).
 nota(schitts_creek, 8.7).
-nota(office_us, 8.8).
+nota(o_office_us, 8.8).
 
 % Animes de comédia
 anime(naruto, comedia).
