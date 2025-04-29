@@ -6,66 +6,73 @@ from pyswip import Prolog
 prolog = Prolog()
 
 # Carregar o código Prolog no Python
-prolog.consult("filmes.pl")  
+prolog.consult("recomendacao.pl")
 
-# Lista de filmes assistidos com seus gêneros
-filmes_assistidos = []
+# Lista de conteúdos assistidos com seus gêneros
+conteudos_assistidos = []
 
-# Função para obter recomendações (Top 3 filmes)
-def recomendar_filmes():
+# Função para recomendar conteúdos com base no tipo (Filme, Série, Anime)
+def recomendar_conteudos():
     gostos = gostos_entry.get().split(',')
     gostos = [gosto.strip().lower().replace(" ", "_") for gosto in gostos] 
+    tipo = tipo_var.get()  # Tipo escolhido: Filme, Série ou Anime
 
-    filmes_recomendados.delete(1.0, tk.END)  # Limpar a lista de filmes recomendados
+    filmes_recomendados.delete(1.0, tk.END)  # Limpar a lista de conteúdos recomendados
 
-    # Consultar Prolog para os filmes recomendados (Top 3)
-    query = "top_3_filmes([{}], Top3)".format(",".join(gostos))  
+    # Ajustar a consulta dependendo do tipo de conteúdo
+    if tipo == "Filme":
+        query = "top_3_filmes([{}], Top3)".format(",".join(gostos))  
+    elif tipo == "Série":
+        query = "top_3_series([{}], Top3)".format(",".join(gostos))
+    elif tipo == "Anime":
+        query = "top_3_animes([{}], Top3)".format(",".join(gostos))
+    
     result = list(prolog.query(query))
 
     if not result:  # Se o resultado estiver vazio
-        filmes_recomendados.insert(tk.END, "Nenhum filme encontrado.\n")
+        filmes_recomendados.insert(tk.END, "Nenhum conteúdo encontrado.\n")
     else:
         count = 0
-        filmes_recomendados.insert(tk.END, "Top 3 filmes para você:\n\n")
-        # O resultado agora será uma lista com 3 filmes e notas
+        filmes_recomendados.insert(tk.END, f"Top 3 {tipo}s recomendados:\n\n")
+        # O resultado agora será uma lista com 3 filmes, séries ou animes
         for item in result:
-            filme_lista = item["Top3"]  
-            for filme_info in filme_lista:
-                filme = filme_info[0]  
-                nota = filme_info[1]  
-                filmes_recomendados.insert(tk.END, f"{filme.replace('_', ' ').title()} - Nota: {nota}\n")
+            conteudo_lista = item["Top3"]  
+            for conteudo_info in conteudo_lista:
+                conteudo = conteudo_info[0]  
+                nota = conteudo_info[1]  
+                filmes_recomendados.insert(tk.END, f"{conteudo.replace('_', ' ').title()} - Nota: {nota}\n")
                 count += 1
 
-# Função para marcar filme como assistido com gênero
+# Função para marcar conteúdo como assistido (Filme, Série ou Anime)
 def marcar_assistido():
-    filme_assistido = filme_entry.get().strip().lower().replace(" ", "_")  # Garantir que o filme está no formato correto
-    genero = gostos_entry.get().strip().lower().replace(" ", "_")  # Usar a mesma entrada de gênero dos gostos
-    prolog.assertz(f"assistido({filme_assistido})")
-    filmes_assistidos.append((filme_assistido, genero))  # Armazenar o filme com o gênero
-    status_label.config(text=f"Filme '{filme_assistido.replace('_', ' ').title()}' do gênero '{genero.replace('_', ' ').title()}' marcado como assistido.")
+    conteudo_assistido = conteudo_entry.get().strip().lower().replace(" ", "_")  # Garantir que o conteúdo está no formato correto
+    tipo = tipo_var.get()  # Tipo escolhido: Filme, Série ou Anime
+    prolog.assertz(f"assistido({conteudo_assistido})")
+    conteudos_assistidos.append((conteudo_assistido, tipo))  # Armazenar o conteúdo com o tipo
+    status_label.config(text=f"'{conteudo_assistido.replace('_', ' ').title()}' do tipo '{tipo}' marcado como assistido.")
 
-# Função para exibir filmes assistidos de acordo com o gênero
-def exibir_filmes_assistidos():
+# Função para exibir conteúdos assistidos de acordo com o tipo
+def exibir_conteudos_assistidos():
     filmes_recomendados.delete(1.0, tk.END)  # Limpar a área de recomendação
-    genero = gostos_entry.get().strip().lower().replace(" ", "_")  # Usar a mesma entrada para o gênero
+    tipo = tipo_var.get().strip().lower().replace(" ", "_")  # Usar a mesma entrada para o tipo
 
-    filmes_assistidos_filtrados = [filme for filme, gen in filmes_assistidos if gen == genero]
+    conteudos_assistidos_filtrados = [conteudo for conteudo, t in conteudos_assistidos if t == tipo]
 
-    if filmes_assistidos_filtrados:  # Se houver filmes assistidos do gênero
-        filmes_recomendados.insert(tk.END, f"Filmes Assistidos ({genero.replace('_', ' ').title()}):\n\n")
-        for filme in filmes_assistidos_filtrados:
-            filmes_recomendados.insert(tk.END, f"{filme.replace('_', ' ').title()}\n")
+    if conteudos_assistidos_filtrados:  # Se houver conteúdos assistidos do tipo
+        filmes_recomendados.insert(tk.END, f"Conteúdos Assistidos ({tipo.replace('_', ' ').title()}):\n\n")
+        for conteudo in conteudos_assistidos_filtrados:
+            filmes_recomendados.insert(tk.END, f"{conteudo.replace('_', ' ').title()}\n")
     else:
-        filmes_recomendados.insert(tk.END, f"Nenhum filme assistido encontrado para o gênero '{genero.replace('_', ' ').title()}'.\n")
+        filmes_recomendados.insert(tk.END, f"Nenhum conteúdo assistido encontrado para o tipo '{tipo.replace('_', ' ').title()}'.\n")
 
-# Função para exibir filmes recomendados
-def exibir_filmes_recomendados():
+# Função para exibir conteúdos recomendados
+def exibir_conteudos_recomendados():
     filmes_recomendados.delete(1.0, tk.END)  # Limpar a área de recomendação
-    recomendar_filmes()  # Exibir os filmes recomendados
+    recomendar_conteudos()  # Exibir os conteúdos recomendados
 
 # Interface gráfica com Tkinter
 root = tk.Tk()
-root.title("Recomendação de Filmes")
+root.title("Recomendação de Conteúdos")
 root.geometry("500x600")  # Definir tamanho fixo da janela
 
 # Definir fontes e estilos
@@ -97,28 +104,41 @@ tk.Label(root, text="Gêneros de interesse (separados por vírgula):", font=font
 gostos_entry = tk.Entry(root, width=50, font=font_entrada, bd=0, relief="flat", fg=bg_color, bg=input_bg_color, insertbackground="white", highlightthickness=2, highlightbackground=highlight_color)
 gostos_entry.pack(pady=5)
 
-# Botão "Recomendar Filmes"
-btn_recomendar = tk.Button(root, text="Recomendar Filmes", font=font_entrada, bg=btn_color, fg=text_color, bd=0, relief="flat", padx=10, pady=5)
+# Criar o filtro de tipo (Filme, Série, Anime)
+tipo_var = tk.StringVar()
+tipo_var.set("Filme")  # Valor inicial
+
+tipo_menu = tk.OptionMenu(root, tipo_var, "Filme", "Série", "Anime")
+tipo_menu.config(font=font_entrada, bg=input_bg_color, fg=bg_color)
+tipo_menu.pack(pady=10)
+
+# Botões "Recomendar Conteúdos" e "Conteúdos Assistidos" lado a lado
+frame_botoes = tk.Frame(root, bg=bg_color)  # Criar um frame para organizar os botões lado a lado
+
+btn_recomendar = tk.Button(frame_botoes, text="Recomendar Conteúdos", font=font_entrada, bg=btn_color, fg=text_color, bd=0, relief="flat", padx=10, pady=5)
 btn_recomendar.bind("<Enter>", lambda e: on_button_hover(e, btn_recomendar, btn_color_hover))
 btn_recomendar.bind("<Leave>", lambda e: on_button_leave(e, btn_recomendar, btn_color))
-btn_recomendar.config(command=exibir_filmes_recomendados)
-btn_recomendar.pack(pady=20)
+btn_recomendar.config(command=exibir_conteudos_recomendados)
 
-# Botão "Filmes Assistidos"
-btn_assistidos = tk.Button(root, text="Filmes Assistidos", font=font_entrada, bg=highlight_color, fg=text_color, bd=0, relief="flat", padx=10, pady=5)
+btn_assistidos = tk.Button(frame_botoes, text="Conteúdos Assistidos", font=font_entrada, bg=highlight_color, fg=text_color, bd=0, relief="flat", padx=10, pady=5)
 btn_assistidos.bind("<Enter>", lambda e: on_button_hover(e, btn_assistidos, "#e68917"))
 btn_assistidos.bind("<Leave>", lambda e: on_button_leave(e, btn_assistidos, highlight_color))
-btn_assistidos.config(command=exibir_filmes_assistidos)
-btn_assistidos.pack(pady=10)
+btn_assistidos.config(command=exibir_conteudos_assistidos)
+
+# Empacotar os botões no frame (lado a lado)
+btn_recomendar.pack(side="left", padx=5)
+btn_assistidos.pack(side="left", padx=5)
+
+frame_botoes.pack(pady=20)  # Empacotar o frame na interface
 
 # Área de recomendação
 filmes_recomendados = tk.Text(root, height=10, width=50, font=font_entrada, bd=2, relief="solid", wrap="word", fg=text_color_2, bg=input_bg_color, insertbackground="white", highlightthickness=2, highlightbackground=highlight_color)
 filmes_recomendados.pack(pady=(10, 20))
 
-# Entrada para marcar filme como assistido
-tk.Label(root, text="Marcar filme como assistido:", font=font_titulo, bg=bg_color, fg=text_color).pack(pady=10)
-filme_entry = tk.Entry(root, width=50, font=font_entrada, bd=0, relief="flat", fg=bg_color, bg=input_bg_color, insertbackground="white", highlightthickness=2, highlightbackground=highlight_color)
-filme_entry.pack(pady=5)
+# Entrada para marcar conteúdo como assistido
+tk.Label(root, text="Marcar conteúdo como assistido:", font=font_titulo, bg=bg_color, fg=text_color).pack(pady=10)
+conteudo_entry = tk.Entry(root, width=50, font=font_entrada, bd=0, relief="flat", fg=bg_color, bg=input_bg_color, insertbackground="white", highlightthickness=2, highlightbackground=highlight_color)
+conteudo_entry.pack(pady=5)
 
 # Botão "Marcar como Assistido"
 btn_assistido = tk.Button(root, text="Marcar como Assistido", font=font_entrada, bg=highlight_color, fg=text_color, bd=0, relief="flat", padx=10, pady=5)
