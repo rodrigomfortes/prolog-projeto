@@ -26,27 +26,24 @@ recomendar_anime(Gostos, Anime, Nota) :-
     member(Genero, Gostos),
     \+ assistido(anime, Anime).  % Verifica se o anime não foi assistido
 
-% Top 3 filmes baseados no gosto do usuário (embora ordenado e removendo duplicatas)
+% Top 3 filmes baseados no gosto do usuário (ordenado por nota, do maior para o menor)
 top_3_filmes(Gostos, Top3) :-
     findall([Filme, Nota], recomendar(Gostos, Filme, Nota), Filmes),
-    random_permutation(Filmes, FilmesEmbaralhados),  % Embaralha os filmes
-    sort(2, @>=, FilmesEmbaralhados, FilmesOrdenados),
+    sort(2, @=<, Filmes, FilmesOrdenados),  % Ordena pelo segundo elemento (Nota), do maior para o menor
     remove_duplicados(FilmesOrdenados, [], FilmesSemDuplicatas),
     first_n(3, FilmesSemDuplicatas, Top3).
 
-% Top 3 séries baseadas no gosto do usuário (embora ordenado e removendo duplicatas)
+% Top 3 séries baseadas no gosto do usuário (ordenado por nota, do maior para o menor)
 top_3_series(Gostos, Top3) :-
     findall([Serie, Nota], recomendar_serie(Gostos, Serie, Nota), Series),
-    random_permutation(Series, SeriesEmbaralhadas),  % Embaralha as séries
-    sort(2, @>=, SeriesEmbaralhadas, SeriesOrdenadas),
+    sort(2, @=<, Series, SeriesOrdenadas),  % Ordena pelo segundo elemento (Nota), do maior para o menor
     remove_duplicados(SeriesOrdenadas, [], SeriesSemDuplicatas),
     first_n(3, SeriesSemDuplicatas, Top3).
 
-% Top 3 animes baseados no gosto do usuário (embora ordenado e removendo duplicatas)
+% Top 3 animes baseados no gosto do usuário (ordenado por nota, do maior para o menor)
 top_3_animes(Gostos, Top3) :-
     findall([Anime, Nota], recomendar_anime(Gostos, Anime, Nota), Animes),
-    random_permutation(Animes, AnimesEmbaralhados),  % Embaralha os animes
-    sort(2, @>=, AnimesEmbaralhados, AnimesOrdenados),
+    sort(2, @=<, Animes, AnimesOrdenados),  % Ordena pelo segundo elemento (Nota), do maior para o menor
     remove_duplicados(AnimesOrdenados, [], AnimesSemDuplicatas),
     first_n(3, AnimesSemDuplicatas, Top3).
 
