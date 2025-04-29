@@ -8,21 +8,20 @@ prolog = Prolog()
 # Carregar o código Prolog no Python
 prolog.consult("recomendacao.pl")
 
-# Função para recomendar conteúdos com base no tipo (Filme, Série, Anime)
+# Função para recomendar conteúdos com base no tipo (Filme, Série, Anime) e gênero
 def recomendar_conteudos():
-    gostos = gostos_entry.get().split(',')
-    gostos = [gosto.strip().lower().replace(" ", "_") for gosto in gostos] 
     tipo = tipo_var.get()  # Tipo escolhido: Filme, Série ou Anime
-
+    genero = genero_var.get()  # Gênero escolhido pelo usuário
+    
     filmes_recomendados.delete(1.0, tk.END)  # Limpar a lista de conteúdos recomendados
-
-    # Ajustar a consulta dependendo do tipo de conteúdo
+    
+    # Ajustar a consulta dependendo do tipo de conteúdo e gênero
     if tipo == "Filme":
-        query = "top_3_filmes([{}], Top3)".format(",".join(gostos))  
+        query = "top_3_filmes([{}], Top3)".format(genero)  
     elif tipo == "Serie":
-        query = "top_3_series([{}], Top3)".format(",".join(gostos))
+        query = "top_3_series([{}], Top3)".format(genero)
     elif tipo == "Anime":
-        query = "top_3_animes([{}], Top3)".format(",".join(gostos))
+        query = "top_3_animes([{}], Top3)".format(genero)
     
     result = list(prolog.query(query))
 
@@ -30,7 +29,7 @@ def recomendar_conteudos():
         filmes_recomendados.insert(tk.END, "Nenhum conteúdo encontrado.\n")
     else:
         count = 0
-        filmes_recomendados.insert(tk.END, f"Top 3 {tipo}s recomendados:\n\n")
+        filmes_recomendados.insert(tk.END, f"Top 3 {tipo}s recomendados ({genero}):\n\n")
         # O resultado agora será uma lista com 3 filmes, séries ou animes
         for item in result:
             conteudo_lista = item["Top3"]  
@@ -88,7 +87,7 @@ def exibir_conteudos_recomendados():
 # Interface gráfica com Tkinter
 root = tk.Tk()
 root.title("Recomendação de Conteúdos")
-root.geometry("500x600")  # Definir tamanho fixo da janela
+root.geometry("600x600")  # Ajuste do tamanho para acomodar os dois filtros
 
 # Definir fontes e estilos
 font_titulo = font.Font(family="Helvetica", size=14, weight="bold")
@@ -114,18 +113,28 @@ def on_button_hover(event, button, color):
 def on_button_leave(event, button, color):
     button.config(bg=color)
 
-# Entradas
-tk.Label(root, text="Gêneros de interesse (separados por vírgula):", font=font_titulo, bg=bg_color, fg=text_color).pack(pady=(30, 5))
-gostos_entry = tk.Entry(root, width=50, font=font_entrada, bd=0, relief="flat", fg=bg_color, bg=input_bg_color, insertbackground="white", highlightthickness=2, highlightbackground=highlight_color)
-gostos_entry.pack(pady=5)
+# Título "Selecione o gênero e o tipo de conteúdo"
+tk.Label(root, text="Selecione o gênero e o tipo de conteúdo", font=font_titulo, bg=bg_color, fg=text_color).pack(pady=(30, 5))
+
+# Criar um frame para os filtros (Tipo de Conteúdo e Gênero)
+frame_filtros = tk.Frame(root, bg=bg_color)
+frame_filtros.pack(pady=10)
 
 # Criar o filtro de tipo (Filme, Série, Anime)
 tipo_var = tk.StringVar()
 tipo_var.set("Filme")  # Valor inicial
 
-tipo_menu = tk.OptionMenu(root, tipo_var, "Filme", "Serie", "Anime")
+tipo_menu = tk.OptionMenu(frame_filtros, tipo_var, "Filme", "Serie", "Anime")
 tipo_menu.config(font=font_entrada, bg=input_bg_color, fg=bg_color)
-tipo_menu.pack(pady=10)
+tipo_menu.pack(side="left", padx=10)
+
+# Criar o filtro de gênero
+genero_var = tk.StringVar()
+genero_var.set("acao")  # Valor inicial (pode ser qualquer valor relevante)
+
+genero_menu = tk.OptionMenu(frame_filtros, genero_var, "acao", "ficcao", "aventura", "fantasia", "drama", "terror", "comedia")
+genero_menu.config(font=font_entrada, bg=input_bg_color, fg=bg_color)
+genero_menu.pack(side="left", padx=10)
 
 # Botões "Recomendar Conteúdos" e "Conteúdos Assistidos" lado a lado
 frame_botoes = tk.Frame(root, bg=bg_color)  # Criar um frame para organizar os botões lado a lado
