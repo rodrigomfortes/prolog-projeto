@@ -19,7 +19,7 @@ def recomendar_conteudos():
     # Ajustar a consulta dependendo do tipo de conteúdo
     if tipo == "Filme":
         query = "top_3_filmes([{}], Top3)".format(",".join(gostos))  
-    elif tipo == "Série":
+    elif tipo == "Serie":
         query = "top_3_series([{}], Top3)".format(",".join(gostos))
     elif tipo == "Anime":
         query = "top_3_animes([{}], Top3)".format(",".join(gostos))
@@ -48,7 +48,7 @@ def marcar_assistido():
     # Ajustando para usar o Prolog para marcar como assistido
     if tipo == "Filme":
         prolog.assertz(f"assistido(filme, {conteudo_assistido})")
-    elif tipo == "Série":
+    elif tipo == "Serie":
         prolog.assertz(f"assistido(serie, {conteudo_assistido})")
     elif tipo == "Anime":
         prolog.assertz(f"assistido(anime, {conteudo_assistido})")
@@ -123,7 +123,7 @@ gostos_entry.pack(pady=5)
 tipo_var = tk.StringVar()
 tipo_var.set("Filme")  # Valor inicial
 
-tipo_menu = tk.OptionMenu(root, tipo_var, "Filme", "Série", "Anime")
+tipo_menu = tk.OptionMenu(root, tipo_var, "Filme", "Serie", "Anime")
 tipo_menu.config(font=font_entrada, bg=input_bg_color, fg=bg_color)
 tipo_menu.pack(pady=10)
 
