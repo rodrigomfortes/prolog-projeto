@@ -86,3 +86,9 @@ assistidos_series(ListaSeries) :-
 % Consultar animes assistidos
 assistidos_animes(ListaAnimes) :-
     findall(Anime, assistido(anime, Anime), ListaAnimes).
+
+% Consultar correspondência de filmes, séries e animes
+consultar_nome(Nome) :-
+    filme(Nome, _).
+    serie(Nome, _).
+    anime(Nome, _).
