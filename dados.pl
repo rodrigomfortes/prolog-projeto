@@ -177,9 +177,9 @@ nota(king_kong, 7.8).
 nota(narnia, 7.5).
 
 % Séries de Aventura
-serie(jogo_dos_tronos, aventura).
-serie(friends, aventura).
-serie(o_hobbit, aventura).
+serie(game_of_thrones, aventura).
+serie(loki, aventura).
+serie(lost, aventura).
 serie(stranger_things, aventura).
 serie(the_witcher, aventura).
 serie(legend_of_korra, aventura).
@@ -187,9 +187,9 @@ serie(terra_nova, aventura).
 serie(narcos, aventura).
 
 % Notas das séries de Aventura
-nota(jogo_dos_tronos, 9.3).
-nota(friends, 8.9).
-nota(o_hobbit, 8.1).
+nota(game_of_thrones, 9.3).
+nota(loki, 8.2).
+nota(lost, 8.3).
 nota(stranger_things, 8.8).
 nota(the_witcher, 8.0).
 nota(legend_of_korra, 8.3).
@@ -243,26 +243,24 @@ nota(a_jornada_dos_elementos, 7.8).
 nota(os_magos_da_noite, 7.7).
 
 % Séries de Fantasia
-serie(o_witcher, fantasia).
-serie(jogo_dos_tronos, fantasia).
-serie(stranger_things, fantasia).
+serie(the_witcher, fantasia).
+serie(game_of_thrones, fantasia).
 serie(the_shannara_chronicles, fantasia).
-serie(a_mandaloriana, fantasia).
+serie(the_mandalorian, fantasia).
 serie(charmed, fantasia).
 serie(the_boys, fantasia).
-serie(marvels_daredevil, fantasia).
+serie(ms_marvel, fantasia).
 serie(underworld, fantasia).
 serie(american_horror_story, fantasia).
 
 % Notas das séries de Fantasia
-nota(o_witcher, 8.0).
-nota(jogo_dos_tronos, 9.3).
-nota(stranger_things, 8.8).
+nota(the_witcher, 8.0).
+nota(game_of_thrones, 9.3).
 nota(the_shannara_chronicles, 7.6).
-nota(a_mandaloriana, 8.6).
+nota(the_mandalorian, 8.6).
 nota(charmed, 7.8).
 nota(the_boys, 8.7).
-nota(marvels_daredevil, 8.6).
+nota(ms_marvel, 6.2).
 nota(underworld, 7.6).
 nota(american_horror_story, 8.3).
 
@@ -308,34 +306,34 @@ nota(a_lista_de_schindler, 9.0).
 
 % Séries de Drama
 serie(breaking_bad, drama).
-serie(the_office, drama).
-serie(friends, drama).
-serie(bojack_horseman, drama).
+serie(black_mirror, drama).
+serie(you, drama).
+serie(os_treze_porques, drama).
 serie(the_crown, drama).
 serie(big_little_lies, drama).
 serie(suits, drama).
-serie(nashville, drama).
+serie(o_gambito_da_rainha, drama).
 serie(the_american, drama).
 
 % Notas das séries de Drama
 nota(breaking_bad, 9.5).
-nota(the_office, 8.8).
-nota(friends, 8.9).
-nota(bojack_horseman, 8.4).
+nota(black_mirror, 8.7).
+nota(you, 7.7).
+nota(os_treze_porques, 7.4).
 nota(the_crown, 8.7).
 nota(big_little_lies, 8.6).
 nota(suits, 8.5).
-nota(nashville, 7.7).
+nota(o_gambito_da_rainha, 8.5).
 nota(the_american, 8.4).
 
 % Animes de Drama
 anime(steins_gate, drama).
 anime(death_note, drama).
 anime(attack_on_titan, drama).
-anime(jojos_bizarre_adventure, drama).
+anime(your_lie_in_april, drama).
 anime(orange, drama).
-anime(anohana, drama).
-anime(clannad, drama).
+anime(your_name, drama).
+anime(a_silent_voice, drama).
 anime(violet_evergarden, drama).
 anime(fruits_basket, drama).
 anime(angel_beats, drama).
@@ -344,10 +342,10 @@ anime(angel_beats, drama).
 nota(steins_gate, 8.8).
 nota(death_note, 9.0).
 nota(attack_on_titan, 8.9).
-nota(jojos_bizarre_adventure, 8.6).
+nota(your_lie_in_april, 8.5).
 nota(orange, 8.4).
-nota(anohana, 8.7).
-nota(clannad, 9.0).
+nota(your_name, 8.4).
+nota(a_silent_voice, 8.1).
 nota(violet_evergarden, 8.9).
 nota(fruits_basket, 8.6).
 nota(angel_beats, 8.1).
@@ -385,7 +383,7 @@ serie(bates_motel, terror).
 serie(scream_queens, terror).
 serie(the_haunting_of_hill_house, terror).
 serie(hannibal, terror).
-serie(the_terror, terror).
+serie(supernatural, terror).
 serie(asylum, terror).
 serie(american_horror_story, terror).
 serie(the_strain, terror).
@@ -397,7 +395,7 @@ nota(bates_motel, 8.0).
 nota(scream_queens, 7.5).
 nota(the_haunting_of_hill_house, 8.6).
 nota(hannibal, 8.5).
-nota(the_terror, 8.0).
+nota(supernatural, 8.4).
 nota(asylum, 7.6).
 nota(american_horror_story, 8.3).
 nota(the_strain, 7.7).
@@ -405,7 +403,7 @@ nota(the_strain, 7.7).
 % Animes de Terror
 anime(tokyo_ghoul, terror).
 anime(another, terror).
-anime(darling_in_the_franxx, terror).
+anime(corpse_party, terror).
 anime(seraph_of_the_end, terror).
 anime(parasyte, terror).
 anime(psycho_pass, terror).
@@ -417,7 +415,7 @@ anime(shiki, terror).
 % Notas dos animes de Terror
 nota(tokyo_ghoul, 8.0).
 nota(another, 8.2).
-nota(darling_in_the_franxx, 7.5).
+nota(corpse_party, 6.3).
 nota(seraph_of_the_end, 7.9).
 nota(parasyte, 8.1).
 nota(psycho_pass, 8.6).
@@ -454,26 +452,26 @@ nota(o_grande_grande_amor, 8.6).
 
 % Séries de Comédia
 serie(friends, comedia).
-serie(breaking_bad, comedia).
-serie(comedians_in_cars_getting_coffee, comedia).
-serie(schitts_creek, comedia).
+serie(brooklyn_99, comedia).
+serie(everybody_hates_chris, comedia).
+serie(the_fresh_prince_of_belair, comedia).
 serie(the_office, comedia).
 serie(the_good_place, comedia).
-serie(parks_and_rec, comedia).
-serie(community, comedia).
-serie(mother, comedia).
+serie(icarly, comedia).
+serie(kenan_e_kel, comedia).
+serie(how_i_met_your_mother, comedia).
 serie(big_bang_theory, comedia).
 
-% Notas das séries de Comédia
+% Notas das Séries de Comédia
 nota(friends, 8.9).
-nota(breaking_bad, 9.5).
-nota(comedians_in_cars_getting_coffee, 8.5).
-nota(schitts_creek, 8.7).
+nota(brooklyn_99, 8.4).
+nota(everybody_hates_chris, 7.6).
+nota(the_fresh_prince_of_belair, 7.9).
 nota(the_office, 8.8).
 nota(the_good_place, 8.6).
-nota(parks_and_rec, 8.8).
-nota(community, 8.5).
-nota(mother, 8.3).
+nota(icarly, 6.8).
+nota(kenan_e_kel, 7.8).
+nota(how_i_met_your_mother, 8.3).
 nota(big_bang_theory, 8.4).
 
 % Animes de Comédia
