@@ -98,15 +98,15 @@ font_titulo = font.Font(family="Helvetica", size=14, weight="bold")
 font_entrada = font.Font(family="Helvetica", size=12)
 font_status = font.Font(family="Helvetica", size=10)
 
-# Definir as cores do tema
-bg_color = "#2e3b4e"
-btn_color = "#4CAF50"
-btn_color_hover = "#45a049"
-highlight_color = "#FF9800"
-text_color = "#ffffff"
-text_color_2 = "#333333"
-input_bg_color = "#f1f1f1"
-status_color = "#7CFC00"
+# Definir as cores do tema (inspirado no Netflix)
+bg_color = "#141414"  # Cor de fundo preta, como o fundo do Netflix
+btn_color = "#E50914"  # Vermelho do Netflix para os botões
+btn_color_hover = "#B81D2A"  # Cor mais clara para o hover
+highlight_color = "#FFFFFF"  # Cor branca para o texto de destaque
+text_color = "#FFFFFF"  # Texto branco para boa legibilidade
+text_color_2 = "#B3B3B3"  # Texto secundário em cinza claro para os detalhes
+input_bg_color = "#333333"  # Cor de fundo do campo de entrada (mais escuro)
+status_color = "#7CFC00"  # Cor verde para status (de acordo com a configuração original)
 
 root.config(bg=bg_color)
 
@@ -117,7 +117,7 @@ def on_button_hover(event, button, color):
 def on_button_leave(event, button, color):
     button.config(bg=color)
 
-# Título "Selecione o gênero e o tipo de conteúdo"
+# Título "Escolha o tipo de conteúdo e o gênero preferido"
 tk.Label(root, text="Escolha o tipo de conteúdo e o gênero preferido", font=font_titulo, bg=bg_color, fg=text_color).pack(pady=(30, 5))
 
 # Criar um frame para os filtros (Tipo de Conteúdo e Gênero)
@@ -129,7 +129,7 @@ tipo_var = tk.StringVar()
 tipo_var.set("Filme")  # Valor inicial
 
 tipo_menu = tk.OptionMenu(frame_filtros, tipo_var, "Filme", "Serie", "Anime")
-tipo_menu.config(font=font_entrada, bg=input_bg_color, fg=bg_color)
+tipo_menu.config(font=font_entrada, bg=input_bg_color, fg=text_color)
 tipo_menu.pack(side="left", padx=10)
 
 # Gêneros para a busca
@@ -140,17 +140,19 @@ genero_var = tk.StringVar()
 genero_var.set("Acao")  # Genero inicial
 
 genero_menu = tk.OptionMenu(frame_filtros, genero_var, *[formatar_genero(g) for g in generos])
-genero_menu.config(font=font_entrada, bg=input_bg_color, fg=bg_color)
+genero_menu.config(font=font_entrada, bg=input_bg_color, fg=text_color)
 genero_menu.pack(side="left", padx=10)
 
 frame_botoes = tk.Frame(root, bg=bg_color)  # Criar um frame para organizar os botões
 
+# Botão "Recomendar Conteúdos"
 btn_recomendar = tk.Button(frame_botoes, text="Recomendar Conteúdos", font=font_entrada, bg=btn_color, fg=text_color, bd=0, relief="flat", padx=10, pady=5)
 btn_recomendar.bind("<Enter>", lambda e: on_button_hover(e, btn_recomendar, btn_color_hover))
 btn_recomendar.bind("<Leave>", lambda e: on_button_leave(e, btn_recomendar, btn_color))
 btn_recomendar.config(command=exibir_conteudos_recomendados)
 
-btn_assistidos = tk.Button(frame_botoes, text="Conteúdos Assistidos", font=font_entrada, bg=highlight_color, fg=text_color, bd=0, relief="flat", padx=10, pady=5)
+# Botão "Conteúdos Assistidos"
+btn_assistidos = tk.Button(frame_botoes, text="Conteúdos Assistidos", font=font_entrada, bg=highlight_color, fg="#000000", bd=0, relief="flat", padx=10, pady=5)
 btn_assistidos.bind("<Enter>", lambda e: on_button_hover(e, btn_assistidos, "#e68917"))
 btn_assistidos.bind("<Leave>", lambda e: on_button_leave(e, btn_assistidos, highlight_color))
 btn_assistidos.config(command=exibir_conteudos_assistidos)
@@ -159,20 +161,20 @@ btn_assistidos.config(command=exibir_conteudos_assistidos)
 btn_recomendar.pack(side="left", padx=5)
 btn_assistidos.pack(side="left", padx=5)
 
-frame_botoes.pack(pady=20)  # Empacotar o frame na interface
+frame_botoes.pack(pady=20) # Empacotar o frame na interface
 
 # Área de recomendação
-filmes_recomendados = tk.Text(root, height=10, width=50, font=font_entrada, bd=2, relief="solid", wrap="word", fg=text_color_2, bg=input_bg_color, insertbackground="white", highlightthickness=2, highlightbackground=highlight_color)
+filmes_recomendados = tk.Text(root, height=10, width=50, font=font_entrada, bd=2, relief="solid", wrap="word", fg="white", bg=input_bg_color, insertbackground="white", highlightthickness=2, highlightbackground=highlight_color)
 filmes_recomendados.config(state="disabled")
 filmes_recomendados.pack(pady=(10, 20))
 
 # Entrada para marcar conteúdo como assistido
 tk.Label(root, text="Marcar conteúdo como assistido:", font=font_titulo, bg=bg_color, fg=text_color).pack(pady=10)
-conteudo_entry = tk.Entry(root, width=50, font=font_entrada, bd=0, relief="flat", fg=bg_color, bg=input_bg_color, insertbackground="white", highlightthickness=2, highlightbackground=highlight_color)
+conteudo_entry = tk.Entry(root, width=50, font=font_entrada, bd=0, relief="flat", fg="white", bg=input_bg_color, insertbackground="white", highlightthickness=2, highlightbackground=highlight_color)
 conteudo_entry.pack(pady=5)
 
 # Botão "Marcar como Assistido"
-btn_assistido = tk.Button(root, text="Marcar como Assistido", font=font_entrada, bg=highlight_color, fg=text_color, bd=0, relief="flat", padx=10, pady=5)
+btn_assistido = tk.Button(root, text="Marcar como Assistido", font=font_entrada, bg=highlight_color, fg="#000000", bd=0, relief="flat", padx=10, pady=5)
 btn_assistido.bind("<Enter>", lambda e: on_button_hover(e, btn_assistido, "#e68917"))
 btn_assistido.bind("<Leave>", lambda e: on_button_leave(e, btn_assistido, highlight_color))
 btn_assistido.config(command=marcar_assistido)
