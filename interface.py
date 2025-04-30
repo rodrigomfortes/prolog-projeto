@@ -40,6 +40,12 @@ def recomendar_conteudos():
 # Função para marcar conteúdo como assistido (Filme, Série ou Anime)
 def marcar_assistido():
     conteudo_assistido = conteudo_entry.get().strip().lower().replace(" ", "_")
+    query = f"consultar_nome('{conteudo_assistido}')"
+    result = list(prolog.query(query))
+    if not result:
+        status_label.config(text=f"Conteúdo '{conteudo_assistido.replace('_', ' ').title()}' não encontrado.")
+        return
+    
     tipo = tipo_var.get()  # Tipo escolhido: Filme, Série ou Anime
     
     # Ajustando para usar o Prolog para marcar como assistido
