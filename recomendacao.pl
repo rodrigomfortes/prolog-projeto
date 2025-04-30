@@ -89,6 +89,6 @@ assistidos_animes(ListaAnimes) :-
 
 % Consultar correspondência de filmes, séries e animes
 consultar_nome(Nome) :-
-    filme(Nome, _).
-    serie(Nome, _).
+    filme(Nome, _);
+    serie(Nome, _);
     anime(Nome, _).
