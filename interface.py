@@ -90,7 +90,7 @@ def formatar_genero(genero):
 
 # Interface gráfica com Tkinter
 root = tk.Tk()
-root.title("Recomendação de Conteúdos")
+root.title("CINEMATCH")
 root.geometry("600x600")
 
 # Definir fontes e estilos
